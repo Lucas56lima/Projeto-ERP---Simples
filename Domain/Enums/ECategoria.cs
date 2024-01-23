@@ -8,7 +8,7 @@ namespace Domain.Enums
 {
     public enum ECategoria
     {
-        CAPA = 1,
-        PELÍCULA = 2
+        Capa = 1,
+        Película = 2
     }
 }
