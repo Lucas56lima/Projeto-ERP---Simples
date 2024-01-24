@@ -67,12 +67,17 @@ namespace Infrastructure.Repository
             {
                 string queryVenda = @"INSERT INTO Faturamento(dataEmissao,status_emissao,transacao,documento,serie,
                 total,CodPagamento,pagamento,parcelas,CodOperadora,operadora) VAlUES(@data,'Aprovada',1,@documento,@serie,
-                @quantidade * @preco,@CodPagamento,@pagamento,@parcelas,@CodOperadora,@operadora)";
+                @preco,@CodPagamento,@pagamento,@parcelas,@CodOperadora,@operadora)";
 
                 string queryUpdateEstoque = @"UPDATE Estoque 
                 SET quantidade=@quantidade,total=@quantidade * @valorUnitario
                 WHERE produto=@produto   
                 ";
+
+
+
+                string queryMovEstoque = @"INSERT INTO MovEstoque(dataMov,tipoMovimento,produto,descricao,documento,valorUnitario,quantidade,total)
+                    VALUES (@data,2,@produto,@descricao,@documento,@valorUnitario,@quantidade,@total)";
 
                 string getQuantidade = "SELECT quantidade FROM Estoque WHERE produto = @produto";
                 string getDescricao = "SELECT descricao FROM Estoque WHERE produto = @produto";
@@ -85,6 +90,7 @@ namespace Infrastructure.Repository
                 var qtdProduto = conn.Query<int>(getQuantidade, new { produto = venda.produto.produto }).FirstOrDefault();
                 var precoProduto = conn.Query<decimal>(getPreco, new { produto = venda.produto.produto }).FirstOrDefault();
                 var descricaoProduto = conn.Query<string>(getDescricao, new { produto = venda.produto.produto }).FirstOrDefault();
+               
 
                 var pagamento = conn.Query<string>(getPagamento, new { CodPagamento = venda.CodPagamento }).FirstOrDefault();
                 var transacao = conn.Query<string>(getTransacao, new { CodTransacao = venda.CodTransacao }).FirstOrDefault();
@@ -94,12 +100,17 @@ namespace Infrastructure.Repository
 
                 var total = precoProduto * venda.quantidade;
                 var valorUnitario = conn.Query<decimal>(getValorUnitario, new { produto = venda.produto.produto }).FirstOrDefault();
-
+                var verificaQtd = await VerificaQuantidade(venda.quantidade, qtdProduto);
+                
+                if (verificaQtd == false)
+                {
+                    return $"Quantidade Indisponível, há apenas {qtdProduto}.";
+                }
                  conn.Query(queryVenda, new
                 {
 
                     data = venda.data,                    
-                    transacao = venda.CodTransacao,
+                    transacao = 1,
                     quantidade = venda.quantidade,
                     documento = venda.documento,
                     serie = venda.serie,                    
@@ -116,6 +127,18 @@ namespace Infrastructure.Repository
                     produto = venda.produto.produto,
                     quantidade = quantidade,
                     valorUnitario = valorUnitario
+                    
+                });
+
+                conn.Query(queryMovEstoque, new
+                {
+                    data = venda.data,
+                    produto = venda.produto.produto,
+                    descricao = descricaoProduto,
+                    documento = venda.documento,
+                    valorUnitario = valorUnitario,
+                    quantidade = venda.quantidade,
+                    total = total
 
                 });
 
@@ -133,14 +156,14 @@ namespace Infrastructure.Repository
                 SET quantidade=@quantidade,valorUnitario=@valorUnitario,total=@quantidade * @valorUnitario
                 WHERE produto=@produto   
                 ";
-
+                
                 string getQuantidade = "SELECT quantidade FROM Estoque WHERE produto = @produto";
                 string getValorUnitario = "SELECT valorUnitario FROM Estoque WHERE produto = @produto";
                 string getTotal = "SELECT total FROM Estoque WHERE produto = @produto";
                 
                 var qtdProduto = conn.Query<int>(getQuantidade, new { produto = estoque.produto }).FirstOrDefault();
                 var vlrUniProduto = conn.Query<decimal>(getValorUnitario, new { produto = estoque.produto }).FirstOrDefault();
-               
+                
                 conn.Query(queryUpdateEstoque, new EstoqueCommand
                 {
                     quantidade = qtdProduto + estoque.quantidade,
@@ -151,6 +174,18 @@ namespace Infrastructure.Repository
                 return "Estoque atualizado";
 
             }
+
+
+        }
+
+        public async Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel)
+        {
+            if(qtdInserida > qtdDisponivel)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

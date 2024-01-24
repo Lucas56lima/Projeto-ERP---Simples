@@ -9,5 +9,6 @@ namespace Domain.Interface
         Task<string> PutEstoqueAsync(EstoqueCommand estoque);
 
         Task<string> PostVendaAsync(VendaViewModel venda);
+        Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel);
     }
 }

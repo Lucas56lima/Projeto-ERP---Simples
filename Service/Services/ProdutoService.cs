@@ -34,6 +34,8 @@ namespace Service.Services
             {
                 return null;
             }
+
+            
             return await _repository.PostVendaAsync(venda);
         }
 
@@ -46,7 +48,10 @@ namespace Service.Services
             return await _repository.PutEstoqueAsync(estoque);
         }
 
-        
+        public Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel)
+        {
+            throw new NotImplementedException();
+        }
     }
 
   
