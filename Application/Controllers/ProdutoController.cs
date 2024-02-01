@@ -26,20 +26,28 @@ namespace Application.Controller
             return Ok(await _produtoService.PostAsync(command));
         }
 
-        [HttpPost]
-        [Route("Vendas")]
+        [HttpPut]
+        [Route("AtualizarProduto")]
 
-        public async Task<IActionResult> PostVendaAsync([FromBody] VendaViewModel venda)
+        public async Task<IActionResult> PutAsync(int codigoProduto, [FromBody] ProdutoCommand command)
         {
-            return Ok(await _produtoService.PostVendaAsync(venda));
+            return Ok(await _produtoService.PutAsync(codigoProduto,command));
         }
 
-        [HttpPut]
-        [Route("AtualizarEstoque")]
+        [HttpGet]
+        [Route("ListaProdutos")]
 
-        public async Task<IActionResult> PutEstoqueAsync(EstoqueCommand estoque)
+        public async Task<IActionResult> GetAsyncList()
         {
-            return Ok(await _produtoService.PutEstoqueAsync(estoque));
+            return Ok(await _produtoService.GetAsyncList());
+        }
+
+        [HttpGet]
+        [Route("FiltrarProduto")]
+
+        public async Task<IActionResult> GetAsyncProduto(int codigoProduto = 0,string descricao)
+        {
+            return Ok(await _produtoService.GetAsyncProduto(codigoProduto,descricao));
         }
 
     }

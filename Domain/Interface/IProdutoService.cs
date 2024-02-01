@@ -6,9 +6,9 @@ namespace Domain.Interface
     public interface IProdutoService
     {
         Task<string> PostAsync(ProdutoCommand command);
-        Task<string> PutEstoqueAsync(EstoqueCommand estoque);
+        Task<string> PutAsync(int codigoProduto, ProdutoCommand command);
+        Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncList();
+        Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncProduto(int codigoProduto,string descricao);
 
-        Task<string> PostVendaAsync(VendaViewModel venda);
-        Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel);
     }
 }

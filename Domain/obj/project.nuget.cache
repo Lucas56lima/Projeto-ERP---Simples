@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "+rc80/jWU1VDQk0JzBRe5/Vt6GBuW4ZSIP+TyKQHg38C3+QvT4tLr1dsssGeoP5CFxi9Yk6VSM4utS2ROTyJjw==",
+  "dgSpecHash": "/rBgrMvpCFBJcDr0jfxin2nFYz26GLXTHGN80BgQ0mhb8PTYCcPKTD7UYiCtczHuDPzmDaQ5rAKFkM+ZYZAqdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuário\\source\\repos\\Application\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\4.0.20710\\microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.net.http\\2.0.20710\\microsoft.net.http.2.0.20710.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\newtonsoft.json\\7.0.1\\newtonsoft.json.7.0.1.nupkg.sha512",

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain.Commands;
+﻿using Domain.Commands;
 using Domain.Interface;
-using Domain.ViewModel;
+using Infrastructure.Repository;
 
 namespace Service.Services
 {
@@ -18,6 +13,16 @@ namespace Service.Services
             _repository = repository;
         }
 
+        public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncList()
+        {
+            return await _repository.GetAsyncList();
+        }
+
+        public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncProduto(int codigoProduto, string descricao)
+        {
+            return await _repository.GetAsyncProduto(codigoProduto,descricao);
+        }
+
         public async Task<string> PostAsync(ProdutoCommand command)
         {
 
@@ -28,31 +33,20 @@ namespace Service.Services
             return await _repository.PostAsync(command);
         }
 
-        public async Task<string> PostVendaAsync(VendaViewModel venda)
-        {
-            if (venda == null)
-            {
-                return null;
-            }
+        
 
-            
-            return await _repository.PostVendaAsync(venda);
-        }
-
-        public async Task<string> PutEstoqueAsync(EstoqueCommand estoque)
+        public async Task<string> PutAsync(int codigoProduto, ProdutoCommand command)
         {
-            if (estoque == null)
+            if (command == null)
             {
                 return "Todos os campos são obrigatórios!";
             }
-            return await _repository.PutEstoqueAsync(estoque);
-        }
-
-        public Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel)
-        {
-            throw new NotImplementedException();
+            return await _repository.PutAsync(codigoProduto, command);
         }
     }
-
-  
 }
+
+       
+    
+
+        

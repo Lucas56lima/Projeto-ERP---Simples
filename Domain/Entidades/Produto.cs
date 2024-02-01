@@ -4,7 +4,8 @@ namespace Domain.Entidades
 {
     public class Produto
     {
-        
+
+        public int codigoProduto { get; set; }
         public string descricao { get; set; }        
         public decimal precoProduto { get; set; }
         public ECategoria categoria { get; set; }
