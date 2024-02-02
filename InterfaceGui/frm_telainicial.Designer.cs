@@ -281,22 +281,7 @@ namespace InterfaceGui
             flow_iniciorapido.ResumeLayout(false);
             ResumeLayout(false);
         }
-
-        public int screenWidth()
-        {
-            Screen primaryScreen = Screen.PrimaryScreen;
-            int screenWidth = primaryScreen.Bounds.Width;
-
-            return screenWidth;
-        }
-
-        public int screenHeigth()
-        {
-            Screen primaryScreen = Screen.PrimaryScreen;
-            int screenHeight = primaryScreen.Bounds.Height;
-
-            return screenHeight;
-        }
+        
 
         private void btnAbrirCaixa_Click(object sender, EventArgs e)
         {

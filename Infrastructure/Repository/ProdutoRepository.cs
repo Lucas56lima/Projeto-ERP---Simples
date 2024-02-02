@@ -13,7 +13,7 @@ namespace Infrastructure.Repository
     {
         string conexao = @"Server=Windows10\SQLExpress;Database=Loja;Trusted_Connection=True;MultipleActiveResultSets=True";
 
-       
+
 
         public async Task<string> PostAsync(ProdutoCommand command)
         {
@@ -33,7 +33,7 @@ namespace Infrastructure.Repository
                 var numCategoria = conn.Query<int>(getNumCategoria, new { categoria = (int)command.categoria }).FirstOrDefault();
 
                 // Crie o código do produto usando o número da categoria, marca e cor
-                var codigoProduto = $"{numCategoria}{(int)command.marca}{(int)command.cor}";
+                var codigoProduto = await GeraCodigoProduto(Convert.ToInt32(command.marca), Convert.ToInt32(command.cor),Convert.ToInt32(command.categoria));
 
                 // Execute a inserção na tabela
                 conn.Execute(queryInsert, new
@@ -72,7 +72,7 @@ namespace Infrastructure.Repository
             subCategoria = @subCategoria,marca = @marca,cor = @cor WHERE codigoProduto = @codigoProduto";
 
 
-            using (SqlConnection conn = new SqlConnection(conexao))
+            await using (SqlConnection conn = new SqlConnection(conexao))
             {
                 conn.Execute(queryUpdate, new
                 {
@@ -83,7 +83,7 @@ namespace Infrastructure.Repository
                     subCategoria = (int)command.subCategoria,
                     marca = (int)command.marca,
                     cor = (int)command.cor,
-                }); ;                
+                }); ;
 
             }
 
@@ -104,25 +104,10 @@ namespace Infrastructure.Repository
 
         public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncProduto(int codigoProduto, string descricao)
         {
-            string queryProduto = "";
-            if (descricao == null || descricao == "" && codigoProduto != 0)
-            {
-               
-                queryProduto = @"
-            SELECT CadastroProduto.*, quantidade FROM CadastroProduto  INNER JOIN Estoque 
-            ON codigoProduto = produto where CadastroProduto.codigoProduto = @codigoProduto";
-            }
-            else if(descricao != null && codigoProduto == 0)
-            {
-                
-                 queryProduto= $@"
-            SELECT CadastroProduto.*, Estoque.quantidade FROM CadastroProduto INNER JOIN Estoque 
-            ON codigoProduto = produto WHERE CadastroProduto.descricao LIKE '%{@descricao}%'";
-            }
+            string queryProduto = await ValidaFiltroProduto(codigoProduto, descricao);
 
             using (SqlConnection conn = new SqlConnection(conexao))
             {
-                
                 return await conn.QueryAsync<ProdutoCommandConsulta>(queryProduto, new
                 {
                     descricao = descricao,
@@ -130,6 +115,45 @@ namespace Infrastructure.Repository
 
                 });
             }
+        }
+
+        public async Task<int> GeraCodigoProduto(int marca, int cor, int categoria)
+        {
+            
+            string getNumCategoria = @"SELECT numero FROM CadCategoria WHERE categoriaID=@categoria";
+
+
+            using (SqlConnection conn = new SqlConnection(conexao))
+            {
+                // Obtenha o número da categoria
+                var numCategoria = conn.Query<int>(getNumCategoria, new { categoria = categoria }).FirstOrDefault();
+
+                // Crie o código do produto usando o número da categoria, marca e cor
+                var codigoProduto = $"{numCategoria}{marca}{cor}";
+
+                return Convert.ToInt32(codigoProduto);
+
+            }
+        }
+
+        public async Task<string> ValidaFiltroProduto(int codigo, string descricao)
+        {
+            string queryProduto = "";
+            if (descricao == null || descricao == "" && codigo != 0)
+            {
+
+                queryProduto = @"
+            SELECT CadastroProduto.*, quantidade FROM CadastroProduto  INNER JOIN Estoque 
+            ON codigoProduto = produto where CadastroProduto.codigoProduto = @codigoProduto";
+            }
+            else if (descricao != null && codigo == 0)
+            {
+                queryProduto = $@"
+            SELECT CadastroProduto.*, Estoque.quantidade FROM CadastroProduto INNER JOIN Estoque 
+            ON codigoProduto = produto WHERE CadastroProduto.descricao LIKE '%{@descricao}%'";
+            }
+
+            return queryProduto;
         }
     }
 }

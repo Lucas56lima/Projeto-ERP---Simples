@@ -11,5 +11,6 @@ namespace Domain.Interface
     {
         Task<string> PostVendaAsync(VendaViewModel venda);
         Task<bool> VerificaQuantidade(int qtdInserida, int qtdDisponivel);
+        
     }
 }

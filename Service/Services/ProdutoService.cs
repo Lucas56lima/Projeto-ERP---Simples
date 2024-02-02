@@ -13,6 +13,11 @@ namespace Service.Services
             _repository = repository;
         }
 
+        public async Task<int> GeraCodigoProduto(int marca, int cor, int categoria)
+        {
+            return await _repository.GeraCodigoProduto(marca,cor,categoria);
+        }
+
         public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncList()
         {
             return await _repository.GetAsyncList();
@@ -20,6 +25,7 @@ namespace Service.Services
 
         public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncProduto(int codigoProduto, string descricao)
         {
+
             return await _repository.GetAsyncProduto(codigoProduto,descricao);
         }
 
@@ -42,6 +48,11 @@ namespace Service.Services
                 return "Todos os campos são obrigatórios!";
             }
             return await _repository.PutAsync(codigoProduto, command);
+        }
+
+        public async Task<string> ValidaFiltroProduto(int codigo, string descricao)
+        {
+            return await _repository.ValidaFiltroProduto(codigo, descricao);
         }
     }
 }

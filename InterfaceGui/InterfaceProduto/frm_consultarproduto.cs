@@ -19,6 +19,10 @@ namespace InterfaceGui.InterfaceProduto
 
             var produtos = await _produtoService.GetAsyncList();
             dataGridView1.DataSource = produtos;
+            Column_produto.HeaderText = "Produto";
+            Column_descricao.HeaderText = "Descrição";
+            Column_preco.HeaderText = "Preço";
+            
         }
 
     }
