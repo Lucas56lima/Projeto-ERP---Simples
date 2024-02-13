@@ -123,7 +123,7 @@ namespace Infrastructure.Repository
             string getNumCategoria = @"SELECT numero FROM CadCategoria WHERE categoriaID=@categoria";
 
 
-            using (SqlConnection conn = new SqlConnection(conexao))
+            await using (SqlConnection conn = new SqlConnection(conexao))
             {
                 // Obtenha o número da categoria
                 var numCategoria = conn.Query<int>(getNumCategoria, new { categoria = categoria }).FirstOrDefault();

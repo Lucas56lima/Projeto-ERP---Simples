@@ -44,3 +44,4 @@ C:\Users\Usuário\source\repos\Application\InterfaceGui\bin\Debug\net8.0-windows
 C:\Users\Usuário\source\repos\Application\InterfaceGui\obj\Debug\net8.0-windows\InterfaceGui.frm_abrircaixa.resources
 C:\Users\Usuário\source\repos\Application\InterfaceGui\obj\Debug\net8.0-windows\InterfaceGui.InterfaceProduto.frm_cadastroproduto.resources
 C:\Users\Usuário\source\repos\Application\InterfaceGui\obj\Debug\net8.0-windows\InterfaceGui.InterfaceProduto.frm_consultarproduto.resources
+C:\Users\Usuário\source\repos\Application\InterfaceGui\obj\Debug\net8.0-windows\InterfaceGui.frm_pdv.resources

@@ -45,6 +45,7 @@
             label_descricao = new Label();
             textBox_descricao = new TextBox();
             textBox_produto = new TextBox();
+            btn_selecionar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -54,15 +55,15 @@
             dataGridView1.BackgroundColor = SystemColors.Window;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(28, 86);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(743, 251);
+            dataGridView1.Size = new Size(743, 232);
             dataGridView1.TabIndex = 0;
             // 
             // Column_produto
             // 
             Column_produto.Name = "Column_produto";
-            
             // 
             // Column_descricao
             // 
@@ -104,7 +105,7 @@
             // btnPesquisar
             // 
             btnPesquisar.BackColor = Color.SteelBlue;
-            btnPesquisar.Location = new Point(643, 22);
+            btnPesquisar.Location = new Point(659, 22);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(81, 23);
             btnPesquisar.TabIndex = 2;
@@ -137,7 +138,7 @@
             textBox_descricao.Location = new Point(161, 23);
             textBox_descricao.Name = "textBox_descricao";
             textBox_descricao.PlaceholderText = "Descrição";
-            textBox_descricao.Size = new Size(476, 23);
+            textBox_descricao.Size = new Size(492, 23);
             textBox_descricao.TabIndex = 1;
             // 
             // textBox_produto
@@ -148,12 +149,25 @@
             textBox_produto.TabIndex = 0;
             textBox_produto.Text = "0";
             // 
+            // btn_selecionar
+            // 
+            btn_selecionar.BackColor = SystemColors.Control;
+            btn_selecionar.Location = new Point(317, 324);
+            btn_selecionar.Name = "btn_selecionar";
+            btn_selecionar.Size = new Size(158, 23);
+            btn_selecionar.TabIndex = 3;
+            btn_selecionar.Text = "Selecionar";
+            btn_selecionar.UseVisualStyleBackColor = false;
+            btn_selecionar.Visible = false;
+            btn_selecionar.Click += BtnPesquisar_Click;
+            // 
             // frm_consultarproduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(197, 212, 230);
             ClientSize = new Size(800, 351);
+            Controls.Add(btn_selecionar);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Name = "frm_consultarproduto";
@@ -186,10 +200,6 @@
 
             dataGridView1.DataSource = filtro;
         }
-
-        
-
-        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column_produto;
         private DataGridViewTextBoxColumn Column_descricao;
         private DataGridViewTextBoxColumn Column_preco;
@@ -203,6 +213,9 @@
         private Button btnPesquisar;
         private TextBox textBox_descricao;
         private TextBox textBox_produto;
+        private Button btnSelecionar;
+        public Button btn_selecionar;
+        public DataGridView dataGridView1;
     }
 
 }

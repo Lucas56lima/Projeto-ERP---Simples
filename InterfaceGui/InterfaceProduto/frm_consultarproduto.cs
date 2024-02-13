@@ -5,23 +5,20 @@ namespace InterfaceGui.InterfaceProduto
     public partial class frm_consultarproduto : Form
     {
         private readonly IProdutoService _produtoService;
+        private frm_pdv frmPdv;
         public frm_consultarproduto(IProdutoService produtoService)
         {
-
-
+            frmPdv = new frm_pdv(produtoService);
+            frmPdv.DataGridViewReference = dataGridView1;
             _produtoService = produtoService;
             InitializeComponent();
-            PreencherDataGridView();
+            PreencherDataGridView();            
         }
 
         private async void PreencherDataGridView()
         {
-
             var produtos = await _produtoService.GetAsyncList();
-            dataGridView1.DataSource = produtos;
-            Column_produto.HeaderText = "Produto";
-            Column_descricao.HeaderText = "Descrição";
-            Column_preco.HeaderText = "Preço";
+            dataGridView1.DataSource = produtos;            
             
         }
 

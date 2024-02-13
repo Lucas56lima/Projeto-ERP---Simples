@@ -7,6 +7,9 @@
     <Compile Update="frm_filtroRelatorioFat.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frm_pdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="InterfaceProduto\frm_cadastroproduto.cs">
       <SubType>Form</SubType>
     </Compile>

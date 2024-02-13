@@ -1,11 +1,4 @@
-﻿
-using System;
-using System.Drawing.Drawing2D;
-using System.Windows.Forms;
-using Domain.Interface;
-using Infrastructure.Repository;
-using InterfaceGui.InterfaceProduto;
-using Service.Services;
+﻿using InterfaceGui.InterfaceProduto;
 
 namespace InterfaceGui
 {
@@ -296,7 +289,7 @@ namespace InterfaceGui
         private async void btnProdutos_Click(object sender, EventArgs e)
         {
 
-            using(frm_consultarproduto frmProduto = new frm_consultarproduto(_produtoService))
+             using(frm_consultarproduto frmProduto = new frm_consultarproduto(_produtoService))
             {
                 frmProduto.ShowDialog();
             }; 
@@ -310,7 +303,7 @@ namespace InterfaceGui
 
         private void btnCadastros_Click(object sender, EventArgs e)
         {
-            label_modulo.Text = "Módulo - Cadastros";           
+            label_modulo.Text = "Módulo - Cadastros";          
 
             btnCadastrarLoja = new Button();
             btnCadastrarLoja.BackColor = Color.SteelBlue;
@@ -342,10 +335,7 @@ namespace InterfaceGui
             btnCadastrarProduto.Text = "Cadastro Produto";
             btnCadastrarProduto.UseVisualStyleBackColor = false;
             btnCadastrarProduto.Click += BtnCadastrarProduto_Click; 
-
-            flowmodulos.Controls.Clear();
-
-            
+            flowmodulos.Controls.Clear();            
             flowmodulos.Controls.Add(btnCadastrarLoja);
             flowmodulos.Controls.Add(btnCadastrarUsuario);
             flowmodulos.Controls.Add(btnCadastrarProduto);
@@ -396,7 +386,10 @@ namespace InterfaceGui
 
         private void btnPdv_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            using (frm_pdv frmPdv = new frm_pdv(_produtoService)) 
+            {
+                frmPdv.ShowDialog();
+            }
         }
 
        
@@ -428,7 +421,7 @@ namespace InterfaceGui
         {
             frm_filtroRelatorioFat frmFiltroRelatorioFat = new frm_filtroRelatorioFat();
 
-            frmFiltroRelatorioFat.Show();
+            frmFiltroRelatorioFat.ShowDialog();
         }
 
         private void CriaVoltarButton() {

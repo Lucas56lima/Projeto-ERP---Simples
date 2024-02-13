@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Domain.Interface;
-using Infrastructure.Repository;
-using Service.Services;
+﻿using Domain.Interface;
 
 namespace InterfaceGui
 {
@@ -19,11 +8,9 @@ namespace InterfaceGui
 
         public frm_telainicial(IProdutoService produtoService)
         {
-
             _produtoService = produtoService; 
             InitializeComponent();
             screenWidth();
-
         }
 
         public void screenWidth()
