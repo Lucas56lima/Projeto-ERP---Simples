@@ -289,11 +289,16 @@ namespace InterfaceGui
         private async void btnProdutos_Click(object sender, EventArgs e)
         {
 
-             using(frm_consultarproduto frmProduto = new frm_consultarproduto(_produtoService))
+            btnProdutos.Enabled = false;
+
+            using (frm_consultarproduto frmProduto = new frm_consultarproduto(_produtoService))
             {
                 frmProduto.ShowDialog();
-            }; 
-            
+            }
+
+            // Após fechar o formulário, reabilita o botão
+            btnProdutos.Enabled = true;
+
         }
 
         private void BtnConsultaPreco_Click(object sender, EventArgs e)

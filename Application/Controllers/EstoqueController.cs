@@ -18,7 +18,6 @@ namespace Application.Controllers
 
         [HttpPut]
         [Route("AtualizarEstoque")]
-
         public async Task<IActionResult> PutEstoqueAsync(EstoqueCommand estoque)
         {
             return Ok(await _estoqueService.PutEstoqueAsync(estoque));

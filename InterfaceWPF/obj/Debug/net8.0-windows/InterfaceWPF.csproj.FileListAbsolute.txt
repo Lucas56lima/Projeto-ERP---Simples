@@ -4,10 +4,12 @@ C:\Users\Usuário\source\repos\Application\InterfaceWPF\bin\Debug\net8.0-windows
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\bin\Debug\net8.0-windows\InterfaceWPF.dll
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\bin\Debug\net8.0-windows\InterfaceWPF.pdb
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\PageFaturamento.g.cs
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF_MarkupCompile.cache
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF_MarkupCompile.lref
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\PageFaturamento.baml
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF.g.resources
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF.AssemblyInfoInputs.cache
@@ -19,5 +21,3 @@ C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF.pdb
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\InterfaceWPF.genruntimeconfig.cache
 C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\ref\InterfaceWPF.dll
-C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\PageFaturamento.g.cs
-C:\Users\Usuário\source\repos\Application\InterfaceWPF\obj\Debug\net8.0-windows\PageFaturamento.baml

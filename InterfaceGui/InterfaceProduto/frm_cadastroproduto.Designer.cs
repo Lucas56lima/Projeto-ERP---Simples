@@ -309,7 +309,7 @@ namespace InterfaceGui.InterfaceProduto
 
             else 
             {
-                var codigoProduto = await _produtoService.GeraCodigoProduto(marca, cor, categoria);
+                var codigoProduto = await _produtoService.GeraCodigoProdutoAutomatico(marca, cor, categoria);
                 textBox_codigo.Text = Convert.ToString(codigoProduto);
                 ProdutoCommand command = new ProdutoCommand()
                 {

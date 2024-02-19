@@ -1,4 +1,6 @@
+using Application;
 using Domain.Interface;
+using Infrastructure.Queries;
 using Infrastructure.Repository;
 using Service.Services;
 
@@ -11,8 +13,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
-builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
-
+string connectionString = @"Server=Windows10\SQLExpress;Database=Loja;Trusted_Connection=True;MultipleActiveResultSets=True";
+builder.Services.AddSingleton(connectionString);
+ConsultaSQL consultaSQL = new ConsultaSQL(); 
+builder.Services.AddScoped<IProdutoRepository>(provider => new ProdutoRepository(connectionString, consultaSQL));
+builder.Services.AddScoped<IEstoqueRepository>(provider => new EstoqueRepository(connectionString, consultaSQL));
+builder.Services.AddScoped<IEstoqueService,EstoqueService>();
 
 var app = builder.Build();
 
@@ -27,6 +33,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers(); 
 
 app.Run();

@@ -7,28 +7,23 @@ namespace Service.Services
     public class ProdutoService : IProdutoService
     {
         private readonly IProdutoRepository _repository;
-
         public ProdutoService(IProdutoRepository repository)
         {
             _repository = repository;
         }
-
-        public async Task<int> GeraCodigoProduto(int marca, int cor, int categoria)
+        public async Task<int> GeraCodigoProdutoAutomatico(int marca, int cor, int categoria)
         {
-            return await _repository.GeraCodigoProduto(marca,cor,categoria);
+            return await _repository.GeraCodigoProdutoAutomatico(marca,cor,categoria);
         }
-
-        public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncList()
+        public async Task<IEnumerable<ProdutoCommand>> GetAsyncList()
         {
             return await _repository.GetAsyncList();
         }
-
-        public async Task<IEnumerable<ProdutoCommandConsulta>> GetAsyncProduto(int codigoProduto, string descricao)
+        public async Task<IEnumerable<ProdutoCommand>> GetAsyncProduto(int codigoProduto, string? descricao)
         {
 
             return await _repository.GetAsyncProduto(codigoProduto,descricao);
         }
-
         public async Task<string> PostAsync(ProdutoCommand command)
         {
 
@@ -37,23 +32,15 @@ namespace Service.Services
                 return "Todos os campos são obrigatórios!";
             }
             return await _repository.PostAsync(command);
-        }
-
-        
-
-        public async Task<string> PutAsync(int codigoProduto, ProdutoCommand command)
+        }                       
+        public async Task<string> UpdateProdutoAsync(int codigoProduto, ProdutoCommand command)
         {
             if (command == null)
             {
                 return "Todos os campos são obrigatórios!";
             }
-            return await _repository.PutAsync(codigoProduto, command);
-        }
-
-        public async Task<string> ValidaFiltroProduto(int codigo, string descricao)
-        {
-            return await _repository.ValidaFiltroProduto(codigo, descricao);
-        }
+            return await _repository.UpdateProdutoAsync(codigoProduto, command);
+        }        
     }
 }
 

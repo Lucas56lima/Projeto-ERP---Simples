@@ -1,46 +1,61 @@
 ﻿using System.Data.SqlClient;
+using Dapper;
 using Domain.Commands;
 using Domain.Interface;
-using Dapper;
 
 namespace Infrastructure.Repository
 {
     public class EstoqueRepository : IEstoqueRepository
     {
-        string conexao = @"Server=Windows10\SQLExpress;Database=Loja;Trusted_Connection=True;MultipleActiveResultSets=True";
+        private readonly string _connectionString;
+        private readonly IConsultaSQL _consultaSQL;
+        public string ConnectionString { get; }
 
+        /// <summary>
+        /// Inicializa uma nova instância do repositório de produtos.
+        /// </summary>
+        /// <param name="connectionString">A string de conexão com o banco de dados.</param>
+        /// <param name="consultaSQL"> Recupera as consultas SQL do COnsultaSQLResource</param>
+
+        public EstoqueRepository(string connectionString, IConsultaSQL consultaSQL)
+        {
+            _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+            _consultaSQL = consultaSQL ?? throw new ArgumentNullException(nameof(consultaSQL));
+        }
         public async Task<string> PutEstoqueAsync(EstoqueCommand estoque)
         {
-
-            using (SqlConnection conn = new SqlConnection(conexao))
+            //Busca a Query para atualizar o Estoque utilizando os parametros produto,quantidade,valorUnitario,valorTotal
+            string queryUpdateEstoque = _consultaSQL.ObterConsulta("AtualizaEstoque");
+            //Busca as informações de estoque atual do produto 
+            string informacoesEstoque = _consultaSQL.ObterConsulta("RecuperaInformacoesEstoque");
+            using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string queryUpdateEstoque = @"UPDATE Estoque 
-                SET quantidade=@quantidade,valorUnitario=@valorUnitario,total=@quantidade * @valorUnitario
-                WHERE produto=@produto   
-                ";
-
-                string getQuantidade = "SELECT quantidade FROM Estoque WHERE produto = @produto";
-                string getValorUnitario = "SELECT valorUnitario FROM Estoque WHERE produto = @produto";
-                string getTotal = "SELECT total FROM Estoque WHERE produto = @produto";
-
-                var qtdProduto = conn.Query<int>(getQuantidade, new { produto = estoque.produto }).FirstOrDefault();
-                var vlrUniProduto = conn.Query<decimal>(getValorUnitario, new { produto = estoque.produto }).FirstOrDefault();
-                var valorTotal = conn.Query<decimal>(getTotal, new {produto = estoque.produto}).FirstOrDefault();
-
-                estoque.valorTotal = estoque.valorUnitario * qtdProduto;
-
-                valorTotal += estoque.valorTotal;
-
-                conn.Query(queryUpdateEstoque, new EstoqueCommand
+                conn.Open();
+                try
                 {
-                    quantidade = qtdProduto + estoque.quantidade,
-                    valorUnitario = valorTotal/(vlrUniProduto + estoque.valorUnitario),
-                    produto = estoque.produto
-                });
+                    var produtoInfo = conn.QueryFirstOrDefault<ProdutoInfoCommand>(informacoesEstoque, new { produto = estoque.produto });
+                    if (produtoInfo == null)
+                    {
+                        throw new Exception("Produto não existe");
+                    }
+                    var parameters = new DynamicParameters();
+                    var qtdAtualizada = produtoInfo.Quantidade + estoque.quantidade;
+                    var valorTotalAtualizado = produtoInfo.Total + estoque.valorTotal;
+                    var valorUnitario = valorTotalAtualizado / qtdAtualizada;
+                    parameters.AddDynamicParams(new { Produto = estoque.produto, Quantidade = qtdAtualizada, ValorUnitario = valorUnitario });
+                    conn.Query(queryUpdateEstoque, parameters);
 
-                return "Estoque atualizado";
-
+                    return "Estoque atualizado";
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 547)
+                        throw new Exception("Produto não existe");
+                    else
+                        throw new Exception("Erro ao conectar com o banco!");
+                }
             }
         }
-    }
+    }    
 }
+

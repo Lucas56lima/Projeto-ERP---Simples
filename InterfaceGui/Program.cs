@@ -3,6 +3,7 @@ using InterfaceGui;
 using Service.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.Repository;
+using Infrastructure.Queries;
 
 static class Program
 {
@@ -22,16 +23,18 @@ static class Program
     }
 
     private static void ConfigureServices(IServiceCollection services)
-    {
-        
-
+    {      
         // Registrar serviços necessários
         services.AddScoped<IProdutoService, ProdutoService>();
         services.AddScoped<IProdutoRepository, ProdutoRepository>();
+        services.AddScoped<IConsultaSQL, ConsultaSQL> ();
+        string connectionString = @"Server=Windows10\SQLExpress;Database=Loja;Trusted_Connection=True;MultipleActiveResultSets=True";
+        services.AddSingleton(connectionString);
+        ConsultaSQL consultaSQL = new ConsultaSQL();
         // Adicione mais registros de serviços conforme necessário...
 
         // Construir o provedor de serviços
-        
+
     }
 
 

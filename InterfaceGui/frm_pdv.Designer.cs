@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -29,7 +28,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_pdv));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
+            btnSelecionar = new Button();
+            btnExcluir = new Button();
             panel_label = new Panel();
             label1 = new Label();
             dataGridView2 = new DataGridView();
@@ -39,12 +41,17 @@
             Marca = new DataGridViewTextBoxColumn();
             Cor = new DataGridViewTextBoxColumn();
             Quantidade = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
             btn_pesquisar = new Button();
             textBox_pesquisar = new TextBox();
             panel1 = new Panel();
             panel4 = new Panel();
+            label_resultado = new Label();
+            textBox_resultado = new TextBox();
+            label_divisao = new Label();
+            textBox_divisao = new TextBox();
             label_desconto = new Label();
-            textBox1 = new TextBox();
+            textBox_desconto = new TextBox();
             label_total = new Label();
             textBox_total = new TextBox();
             panel3 = new Panel();
@@ -78,6 +85,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.BackColor = Color.Snow;
+            splitContainer1.Panel2.Controls.Add(btnSelecionar);
+            splitContainer1.Panel2.Controls.Add(btnExcluir);
             splitContainer1.Panel2.Controls.Add(panel_label);
             splitContainer1.Panel2.Controls.Add(dataGridView2);
             splitContainer1.Panel2.Controls.Add(btn_pesquisar);
@@ -86,6 +95,28 @@
             splitContainer1.Size = new Size(1352, 729);
             splitContainer1.SplitterDistance = 337;
             splitContainer1.TabIndex = 0;
+            // 
+            // btnSelecionar
+            // 
+            btnSelecionar.BackColor = SystemColors.GradientActiveCaption;
+            btnSelecionar.Location = new Point(365, 559);
+            btnSelecionar.Name = "btnSelecionar";
+            btnSelecionar.Size = new Size(100, 23);
+            btnSelecionar.TabIndex = 6;
+            btnSelecionar.Text = "Selecionar tudo";
+            btnSelecionar.UseVisualStyleBackColor = false;
+            btnSelecionar.Visible = false;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.BackColor = SystemColors.ScrollBar;
+            btnExcluir.Location = new Point(234, 559);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(100, 23);
+            btnExcluir.TabIndex = 5;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Visible = false;
             // 
             // panel_label
             // 
@@ -110,6 +141,7 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView2.BackgroundColor = Color.Snow;
@@ -117,44 +149,54 @@
             dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Codigo, Descricao, Preco, Marca, Cor, Quantidade });
-            dataGridView2.Location = new Point(8, 194);
-            dataGridView2.MultiSelect = false;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Codigo, Descricao, Preco, Marca, Cor, Quantidade, Total });
+            dataGridView2.Location = new Point(5, 194);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.Size = new Size(733, 387);
+            dataGridView2.Size = new Size(736, 359);
             dataGridView2.TabIndex = 3;
             // 
             // Codigo
             // 
             Codigo.HeaderText = "Código";
             Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
             // 
             // Descricao
             // 
             Descricao.HeaderText = "Descrição";
             Descricao.Name = "Descricao";
+            Descricao.ReadOnly = true;
             // 
             // Preco
             // 
             Preco.HeaderText = "Preço";
             Preco.Name = "Preco";
+            Preco.ReadOnly = true;
             // 
             // Marca
             // 
             Marca.HeaderText = "Marca";
             Marca.Name = "Marca";
+            Marca.ReadOnly = true;
             // 
             // Cor
             // 
             Cor.HeaderText = "Cor";
             Cor.Name = "Cor";
+            Cor.ReadOnly = true;
             // 
             // Quantidade
             // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Quantidade.DefaultCellStyle = dataGridViewCellStyle1;
             Quantidade.HeaderText = "Quantidade";
             Quantidade.Name = "Quantidade";
+            // 
+            // Total
+            // 
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
             // 
             // btn_pesquisar
             // 
@@ -189,53 +231,109 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(label_resultado);
+            panel4.Controls.Add(textBox_resultado);
+            panel4.Controls.Add(label_divisao);
+            panel4.Controls.Add(textBox_divisao);
             panel4.Controls.Add(label_desconto);
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(textBox_desconto);
             panel4.Controls.Add(label_total);
             panel4.Controls.Add(textBox_total);
-            panel4.Location = new Point(32, 335);
+            panel4.Location = new Point(19, 335);
             panel4.Name = "panel4";
-            panel4.Size = new Size(199, 331);
+            panel4.Size = new Size(233, 331);
             panel4.TabIndex = 1;
+            // 
+            // label_resultado
+            // 
+            label_resultado.BackColor = Color.Transparent;
+            label_resultado.BorderStyle = BorderStyle.Fixed3D;
+            label_resultado.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_resultado.ForeColor = SystemColors.Control;
+            label_resultado.Location = new Point(0, 71);
+            label_resultado.Name = "label_resultado";
+            label_resultado.Size = new Size(117, 35);
+            label_resultado.TabIndex = 7;
+            label_resultado.Text = "Resultado";
+            label_resultado.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBox_resultado
+            // 
+            textBox_resultado.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox_resultado.Location = new Point(112, 71);
+            textBox_resultado.Name = "textBox_resultado";
+            textBox_resultado.ReadOnly = true;
+            textBox_resultado.Size = new Size(118, 35);
+            textBox_resultado.TabIndex = 6;
+            textBox_resultado.Text = "0,00";
+            textBox_resultado.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label_divisao
+            // 
+            label_divisao.BackColor = Color.Transparent;
+            label_divisao.BorderStyle = BorderStyle.Fixed3D;
+            label_divisao.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_divisao.ForeColor = SystemColors.Control;
+            label_divisao.Location = new Point(0, 16);
+            label_divisao.Name = "label_divisao";
+            label_divisao.Size = new Size(117, 35);
+            label_divisao.TabIndex = 5;
+            label_divisao.Text = "Dividir Valor";
+            label_divisao.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBox_divisao
+            // 
+            textBox_divisao.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox_divisao.Location = new Point(112, 16);
+            textBox_divisao.Name = "textBox_divisao";
+            textBox_divisao.Size = new Size(118, 35);
+            textBox_divisao.TabIndex = 4;
+            textBox_divisao.Text = "1";
+            textBox_divisao.TextAlign = HorizontalAlignment.Center;
             // 
             // label_desconto
             // 
-            label_desconto.BackColor = Color.Tomato;
+            label_desconto.BackColor = Color.Transparent;
+            label_desconto.BorderStyle = BorderStyle.Fixed3D;
             label_desconto.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_desconto.ForeColor = SystemColors.Control;
-            label_desconto.Location = new Point(12, 33);
+            label_desconto.Location = new Point(0, 124);
             label_desconto.Name = "label_desconto";
-            label_desconto.Size = new Size(105, 35);
+            label_desconto.Size = new Size(114, 35);
             label_desconto.TabIndex = 3;
             label_desconto.Text = "Desconto";
+            label_desconto.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBox_desconto
             // 
-            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(112, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(85, 35);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "0,00";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox_desconto.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox_desconto.Location = new Point(112, 124);
+            textBox_desconto.Name = "textBox_desconto";
+            textBox_desconto.Size = new Size(118, 35);
+            textBox_desconto.TabIndex = 2;
+            textBox_desconto.Text = "0,00";
+            textBox_desconto.TextAlign = HorizontalAlignment.Center;
             // 
             // label_total
             // 
             label_total.BackColor = Color.Red;
-            label_total.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_total.BorderStyle = BorderStyle.Fixed3D;
+            label_total.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_total.ForeColor = SystemColors.Control;
-            label_total.Location = new Point(12, 83);
+            label_total.Location = new Point(0, 175);
             label_total.Name = "label_total";
-            label_total.Size = new Size(83, 43);
+            label_total.Size = new Size(117, 35);
             label_total.TabIndex = 1;
             label_total.Text = "Total";
+            label_total.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_total
             // 
-            textBox_total.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox_total.Location = new Point(95, 83);
+            textBox_total.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox_total.Location = new Point(112, 175);
             textBox_total.Name = "textBox_total";
-            textBox_total.Size = new Size(102, 43);
+            textBox_total.ReadOnly = true;
+            textBox_total.Size = new Size(118, 35);
             textBox_total.TabIndex = 0;
             textBox_total.Text = "0,00";
             textBox_total.TextAlign = HorizontalAlignment.Center;
@@ -246,17 +344,17 @@
             panel3.Controls.Add(btn_dinheiro);
             panel3.Controls.Add(btn_credito);
             panel3.Controls.Add(btn_debito);
-            panel3.Location = new Point(32, 89);
+            panel3.Location = new Point(19, 89);
             panel3.Name = "panel3";
-            panel3.Size = new Size(199, 107);
+            panel3.Size = new Size(233, 102);
             panel3.TabIndex = 0;
             // 
             // btn_pix
             // 
             btn_pix.BackColor = SystemColors.Control;
-            btn_pix.Location = new Point(112, 67);
+            btn_pix.Location = new Point(140, 64);
             btn_pix.Name = "btn_pix";
-            btn_pix.Size = new Size(75, 35);
+            btn_pix.Size = new Size(90, 35);
             btn_pix.TabIndex = 3;
             btn_pix.Text = "Pix";
             btn_pix.UseVisualStyleBackColor = false;
@@ -264,9 +362,9 @@
             // btn_dinheiro
             // 
             btn_dinheiro.BackColor = SystemColors.Control;
-            btn_dinheiro.Location = new Point(12, 67);
+            btn_dinheiro.Location = new Point(0, 64);
             btn_dinheiro.Name = "btn_dinheiro";
-            btn_dinheiro.Size = new Size(75, 35);
+            btn_dinheiro.Size = new Size(90, 35);
             btn_dinheiro.TabIndex = 2;
             btn_dinheiro.Text = "Dinheiro";
             btn_dinheiro.UseVisualStyleBackColor = false;
@@ -274,9 +372,9 @@
             // btn_credito
             // 
             btn_credito.BackColor = SystemColors.Control;
-            btn_credito.Location = new Point(112, 11);
+            btn_credito.Location = new Point(140, 3);
             btn_credito.Name = "btn_credito";
-            btn_credito.Size = new Size(75, 35);
+            btn_credito.Size = new Size(90, 35);
             btn_credito.TabIndex = 1;
             btn_credito.Text = "Crédito";
             btn_credito.UseVisualStyleBackColor = false;
@@ -284,9 +382,9 @@
             // btn_debito
             // 
             btn_debito.BackColor = SystemColors.Control;
-            btn_debito.Location = new Point(12, 11);
+            btn_debito.Location = new Point(3, 3);
             btn_debito.Name = "btn_debito";
-            btn_debito.Size = new Size(75, 35);
+            btn_debito.Size = new Size(90, 35);
             btn_debito.TabIndex = 0;
             btn_debito.Text = "Débito";
             btn_debito.UseVisualStyleBackColor = false;
@@ -328,16 +426,23 @@
         private Button btn_credito;
         private Button btn_debito;
         private Panel panel4;
+        public DataGridView dataGridView2;
+        private Label label_total;
+        public TextBox textBox_total;
+        private Label label_desconto;
+        public TextBox textBox_desconto;
+        public Button btnExcluir;
+        public Button btnSelecionar;
+        private Label label_divisao;
+        public TextBox textBox_divisao;
+        private Label label_resultado;
+        public TextBox textBox_resultado;
         private DataGridViewTextBoxColumn Codigo;
         private DataGridViewTextBoxColumn Descricao;
         private DataGridViewTextBoxColumn Preco;
         private DataGridViewTextBoxColumn Marca;
         private DataGridViewTextBoxColumn Cor;
         private DataGridViewTextBoxColumn Quantidade;
-        public DataGridView dataGridView2;
-        private Label label_total;
-        public TextBox textBox_total;
-        private Label label_desconto;
-        public TextBox textBox1;
+        private DataGridViewTextBoxColumn Total;
     }
 }

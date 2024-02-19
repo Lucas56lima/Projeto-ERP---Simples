@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}|..\\ApplicationTests\\ApplicationTests\\ApplicationTests.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\applicationtests\\applicationtests\\estoquerepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Program.cs",
+              "RelativeDocumentMoniker": "Application\\Program.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Program.cs",
+              "RelativeToolTip": "Application\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAgwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:21:00.338Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Estoque.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Estoque.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Estoque.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Estoque.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Estoque.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:43:15.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EstoqueRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\EstoqueRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\EstoqueRepository.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:40:13.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstoqueRepositoryTest.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
+              "RelativeDocumentMoniker": "..\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
+              "RelativeToolTip": "..\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAjwC0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:21:15.493Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

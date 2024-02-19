@@ -1,3 +1,17 @@
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\NUnit.VisualStudio.TestAdapter.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Mono.Cecil.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Mono.Cecil.Mdb.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Mono.Cecil.Pdb.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Mono.Cecil.Rocks.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.core.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.core.interfaces.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.util.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\NUnit3.TestAdapter.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\NUnit3.TestAdapter.pdb
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.engine.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.engine.api.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\nunit.engine.core.dll
+C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\testcentric.engine.metadata.dll
 C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Service.deps.json
 C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Service.dll
 C:\Users\Usuário\source\repos\Application\Service\bin\Debug\net8.0\Service.pdb
@@ -11,8 +25,8 @@ C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.Asse
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.sourcelink.json
-C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.csproj.CopyComplete
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.dll
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\refint\Service.dll
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.pdb
 C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\ref\Service.dll
+C:\Users\Usuário\source\repos\Application\Service\obj\Debug\net8.0\Service.csproj.Up2Date

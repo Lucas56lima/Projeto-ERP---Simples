@@ -14,13 +14,10 @@ namespace InterfaceGui.InterfaceProduto
             InitializeComponent();
             PreencherDataGridView();            
         }
-
         private async void PreencherDataGridView()
         {
             var produtos = await _produtoService.GetAsyncList();
-            dataGridView1.DataSource = produtos;            
-            
+            dataGridView1.DataSource = produtos;           
         }
-
     }
 }

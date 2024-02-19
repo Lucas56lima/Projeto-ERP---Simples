@@ -1,18 +1,14 @@
 ﻿using Domain.Commands;
 using Domain.Interface;
-using Domain.ViewModel;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controller
 {
     [Route("api/[controller]")]
-    [ApiController]
-    
+    [ApiController]    
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoService _produtoService;
-
         public ProdutoController(IProdutoService produtoService)
         {
             _produtoService = produtoService;
@@ -29,9 +25,9 @@ namespace Application.Controller
         [HttpPut]
         [Route("AtualizarProduto")]
 
-        public async Task<IActionResult> PutAsync(int codigoProduto, [FromBody] ProdutoCommand command)
+        public async Task<IActionResult> UpdateProdutoAsync(int codigoProduto, [FromBody] ProdutoCommand command)
         {
-            return Ok(await _produtoService.PutAsync(codigoProduto,command));
+            return Ok(await _produtoService.UpdateProdutoAsync(codigoProduto,command));
         }
 
         [HttpGet]
@@ -45,7 +41,7 @@ namespace Application.Controller
         [HttpGet]
         [Route("FiltrarProduto")]
 
-        public async Task<IActionResult> GetAsyncProduto(int codigoProduto = 0,string descricao)
+        public async Task<IActionResult> GetAsyncProduto(int codigoProduto,string?descricao)
         {
             return Ok(await _produtoService.GetAsyncProduto(codigoProduto,descricao));
         }

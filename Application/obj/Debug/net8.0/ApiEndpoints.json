@@ -1,0 +1,102 @@
+[
+  {
+    "ContainingType": "Application.Controllers.EstoqueController",
+    "Method": "PutEstoqueAsync",
+    "RelativePath": "api/Estoque/AtualizarEstoque",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estoque",
+        "Type": "EstoqueCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.Controller.ProdutoController",
+    "Method": "UpdateProdutoAsync",
+    "RelativePath": "api/Produto/AtualizarProduto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProduto",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "command",
+        "Type": "Domain.Commands.ProdutoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.Controller.ProdutoController",
+    "Method": "PostAsync",
+    "RelativePath": "api/Produto/CadastrarProduto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Domain.Commands.ProdutoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.Controller.ProdutoController",
+    "Method": "GetAsyncProduto",
+    "RelativePath": "api/Produto/FiltrarProduto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProduto",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "descricao",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.Controller.ProdutoController",
+    "Method": "GetAsyncList",
+    "RelativePath": "api/Produto/ListaProdutos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.Controllers.VendasController",
+    "Method": "PostVendaAsync",
+    "RelativePath": "api/Vendas/Vendas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "venda",
+        "Type": "Domain.ViewModel.VendaViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

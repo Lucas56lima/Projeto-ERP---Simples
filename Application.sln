@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceGui", "InterfaceGui\InterfaceGui.csproj", "{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceWPF", "InterfaceWPF\InterfaceWPF.csproj", "{68052E65-E573-4159-88BC-3B0F732CC033}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceWPF", "InterfaceWPF\InterfaceWPF.csproj", "{68052E65-E573-4159-88BC-3B0F732CC033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationTests", "..\ApplicationTests\ApplicationTests\ApplicationTests.csproj", "{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{68052E65-E573-4159-88BC-3B0F732CC033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68052E65-E573-4159-88BC-3B0F732CC033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68052E65-E573-4159-88BC-3B0F732CC033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
