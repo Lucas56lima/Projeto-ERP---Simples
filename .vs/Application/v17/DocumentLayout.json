@@ -3,7 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{278D99D3-DBB0-4E00-95B0-8A72DC648B4A}|..\\ApplicationTests\\ApplicationTests\\ApplicationTests.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\applicationtests\\applicationtests\\estoquerepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\commands\\produtoinfocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\commands\\produtoinfocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\produtoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\produtoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\viewmodel\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\viewmodel\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -12,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -43,7 +72,121 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_pagamentos.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\frm_pagamentos.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs [Projeto]",
+              "RelativeToolTip": "InterfaceGui\\frm_pagamentos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T13:23:35.011Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_pdv.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\frm_pdv.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs [Projeto]",
+              "RelativeToolTip": "InterfaceGui\\frm_pdv.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T13:08:59.001Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frm_pdv.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\frm_pdv.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
+              "RelativeToolTip": "InterfaceGui\\frm_pdv.cs",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAYwIsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T13:05:35.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutoInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\ProdutoInfo.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\ProdutoInfo.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\ProdutoInfo.cs",
+              "RelativeToolTip": "Domain\\Entidades\\ProdutoInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T12:15:44.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoInfoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoInfoCommand.cs",
+              "RelativeDocumentMoniker": "Domain\\Commands\\ProdutoInfoCommand.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoInfoCommand.cs",
+              "RelativeToolTip": "Domain\\Commands\\ProdutoInfoCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T12:15:27.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VendasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAA7wBMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T11:29:08.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VendaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\VendaViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModel\\VendaViewModel.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\VendaViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModel\\VendaViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T12:34:59.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConsultaSQLResource.resx",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "RelativeDocumentMoniker": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "RelativeToolTip": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-02-20T11:30:39.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EstoqueRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\EstoqueRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\EstoqueRepository.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAkwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:40:13.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Estoque.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Estoque.cs",
               "RelativeDocumentMoniker": "Domain\\Entidades\\Estoque.cs",
@@ -52,32 +195,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T19:43:15.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EstoqueRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\EstoqueRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\EstoqueRepository.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowDkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T19:40:13.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EstoqueRepositoryTest.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
-              "RelativeDocumentMoniker": "..\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
-              "RelativeToolTip": "..\\ApplicationTests\\ApplicationTests\\EstoqueRepositoryTest.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAjwC0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T19:21:15.493Z",
               "EditorCaption": ""
             }
           ]

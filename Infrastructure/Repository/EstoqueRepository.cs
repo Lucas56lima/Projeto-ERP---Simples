@@ -24,31 +24,39 @@ namespace Infrastructure.Repository
         }
         public async Task<string> PutEstoqueAsync(EstoqueCommand estoque)
         {
-            //Busca a Query para atualizar o Estoque utilizando os parametros produto,quantidade,valorUnitario,valorTotal
             string queryUpdateEstoque = _consultaSQL.ObterConsulta("AtualizaEstoque");
-            //Busca as informações de estoque atual do produto 
             string informacoesEstoque = _consultaSQL.ObterConsulta("RecuperaInformacoesEstoque");
+
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                conn.Open();
+                await conn.OpenAsync();
+                SqlTransaction tran = conn.BeginTransaction();
+
                 try
                 {
-                    var produtoInfo = conn.QueryFirstOrDefault<ProdutoInfoCommand>(informacoesEstoque, new { produto = estoque.produto });
+                    var produtoInfo = await conn.QueryFirstOrDefaultAsync<ProdutoInfoCommand>(informacoesEstoque, new { produto = estoque.produto }, transaction: tran);
                     if (produtoInfo == null)
                     {
+                        tran.Rollback(); // Revertendo a transação em caso de produto não encontrado
                         throw new Exception("Produto não existe");
                     }
-                    var parameters = new DynamicParameters();
+
+                    var parametros = new DynamicParameters();
                     var qtdAtualizada = produtoInfo.Quantidade + estoque.quantidade;
                     var valorTotalAtualizado = produtoInfo.Total + estoque.valorTotal;
                     var valorUnitario = valorTotalAtualizado / qtdAtualizada;
-                    parameters.AddDynamicParams(new { Produto = estoque.produto, Quantidade = qtdAtualizada, ValorUnitario = valorUnitario });
-                    conn.Query(queryUpdateEstoque, parameters);
 
+                    parametros.AddDynamicParams(new { Produto = estoque.produto, Quantidade = qtdAtualizada, ValorUnitario = valorUnitario });
+
+                    await conn.ExecuteAsync(queryUpdateEstoque, parametros, transaction: tran);
+
+                    tran.Commit(); // Confirmando a transação
                     return "Estoque atualizado";
                 }
                 catch (SqlException ex)
                 {
+                    tran.Rollback(); // Revertendo a transação em caso de exceção SQL
+
                     if (ex.Number == 547)
                         throw new Exception("Produto não existe");
                     else
@@ -56,6 +64,8 @@ namespace Infrastructure.Repository
                 }
             }
         }
-    }    
-}
+
+    }
+}    
+
 

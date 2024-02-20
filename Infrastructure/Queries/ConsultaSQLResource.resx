@@ -151,17 +151,46 @@ INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE Cada
     <value>INSERT INTO Estoque (produto,descricao) VALUES(@codigoProduto,UPPER(@descricao))</value>
     <comment>Inserir estoque do produto na tabela Estoque.</comment>
   </data>
+  <data name="InserirMovEstoque" xml:space="preserve">
+    <value>INSERT INTO MovEstoque(dataMov,tipoMovimento,produto,descricao,documento,valorUnitario,quantidade,total)
+                    VALUES (@data,2,@produto,@descricao,@documento,@valorUnitario,@quantidade,@total)</value>
+    <comment>Insere movimentação de estoque.</comment>
+  </data>
   <data name="InserirProduto" xml:space="preserve">
     <value>INSERT INTO CadastroProduto (codigoProduto,descricao,precoProduto,categoria,subCategoria,marca,cor) VALUES
 (@codigoProduto,UPPER(@descricao),@precoProduto,@categoria,@subCategoria,@marca,@cor)</value>
     <comment>Inserir produto na tabela CadastroProduto.</comment>
+  </data>
+  <data name="InserirVenda" xml:space="preserve">
+    <value>INSERT INTO Faturamento(dataEmissao,status_emissao,transacao,documento,serie,
+                total,CodPagamento,pagamento,parcelas,CodOperadora,operadora) VAlUES(@data,'Aprovada',1,@documento,@serie,
+                @preco,@CodPagamento,@pagamento,@parcelas,@CodOperadora,@operadora)</value>
+    <comment>Insere vendas no relatório.</comment>
   </data>
   <data name="RecuperaCategoria" xml:space="preserve">
     <value>SELECT numero FROM CadCategoria WHERE categoriaID=@categoria</value>
     <comment>Busca os numeros das categorias disponíveis.</comment>
   </data>
   <data name="RecuperaInformacoesEstoque" xml:space="preserve">
-    <value>SELECT quantidade,total FROM Estoque WHERE produto = @produto</value>
-    <comment>Recupera a quantidade do produto.</comment>
+    <value>SELECT Estoque.descricao,Estoque.quantidade,Estoque.valorUnitario, precoProduto 
+FROM CadastroProduto 
+INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE CadastroProduto.codigoProduto = @codigoProduto</value>
+    <comment>Recupera informações de estoque e preço do produto.</comment>
+  </data>
+  <data name="RecuperaOperadoraCartao" xml:space="preserve">
+    <value>SELECT nomeOperadora FROM CadOperadora WHERE operadoraID= @Codoperadora</value>
+    <comment>Recupera operadora de cartão disponível.</comment>
+  </data>
+  <data name="RecuperaPrecoProduto" xml:space="preserve">
+    <value>SELECT precoProduto FROM CadastroProduto WHERE codigoProduto = @produto</value>
+    <comment>Recupera preço do produto.</comment>
+  </data>
+  <data name="RecuperaTipoPagamento" xml:space="preserve">
+    <value>SELECT nomePagamento FROM CadPagamento WHERE pagamentoID= @Codpagamento</value>
+    <comment>Recupera tipo de pagamento disponivel.</comment>
+  </data>
+  <data name="RecuperaTipoTransacao" xml:space="preserve">
+    <value>SELECT nomeTransacoes FROM Cadtransacoes WHERE transacoesID= @Codtransacao</value>
+    <comment>Recupera tipo de transação disponível.</comment>
   </data>
 </root>

@@ -10,7 +10,8 @@ namespace Domain.ViewModel
 {
     public class VendaViewModel
     {
-        public ProdutoViewModel produto { get; set; }
+        public int Produto { get; set; }
+        public ProdutoInfoCommand PrecoProduto { get; set; }
         public int quantidade { get; set; }
         public DateTime data { get; set; }
 

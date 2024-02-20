@@ -130,12 +130,33 @@ namespace Infrastructure.Queries {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a INSERT INTO MovEstoque(dataMov,tipoMovimento,produto,descricao,documento,valorUnitario,quantidade,total)
+        ///                    VALUES (@data,2,@produto,@descricao,@documento,@valorUnitario,@quantidade,@total).
+        /// </summary>
+        internal static string InserirMovEstoque {
+            get {
+                return ResourceManager.GetString("InserirMovEstoque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a INSERT INTO CadastroProduto (codigoProduto,descricao,precoProduto,categoria,subCategoria,marca,cor) VALUES
         ///(@codigoProduto,UPPER(@descricao),@precoProduto,@categoria,@subCategoria,@marca,@cor).
         /// </summary>
         internal static string InserirProduto {
             get {
                 return ResourceManager.GetString("InserirProduto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a INSERT INTO Faturamento(dataEmissao,status_emissao,transacao,documento,serie,
+        ///                total,CodPagamento,pagamento,parcelas,CodOperadora,operadora) VAlUES(@data,&apos;Aprovada&apos;,1,@documento,@serie,
+        ///                @preco,@CodPagamento,@pagamento,@parcelas,@CodOperadora,@operadora).
+        /// </summary>
+        internal static string InserirVenda {
+            get {
+                return ResourceManager.GetString("InserirVenda", resourceCulture);
             }
         }
         
@@ -149,11 +170,49 @@ namespace Infrastructure.Queries {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT quantidade,total FROM Estoque WHERE produto = @produto.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT Estoque.descricao,Estoque.quantidade,Estoque.valorUnitario, precoProduto 
+        ///FROM CadastroProduto 
+        ///INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE CadastroProduto.codigoProduto = @codigoProduto.
         /// </summary>
         internal static string RecuperaInformacoesEstoque {
             get {
                 return ResourceManager.GetString("RecuperaInformacoesEstoque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT nomeOperadora FROM CadOperadora WHERE operadoraID= @Codoperadora.
+        /// </summary>
+        internal static string RecuperaOperadoraCartao {
+            get {
+                return ResourceManager.GetString("RecuperaOperadoraCartao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT precoProduto FROM CadastroProduto WHERE codigoProduto = @produto.
+        /// </summary>
+        internal static string RecuperaPrecoProduto {
+            get {
+                return ResourceManager.GetString("RecuperaPrecoProduto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT nomePagamento FROM CadPagamento WHERE pagamentoID= @Codpagamento.
+        /// </summary>
+        internal static string RecuperaTipoPagamento {
+            get {
+                return ResourceManager.GetString("RecuperaTipoPagamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT nomeTransacoes FROM Cadtransacoes WHERE transacoesID= @Codtransacao.
+        /// </summary>
+        internal static string RecuperaTipoTransacao {
+            get {
+                return ResourceManager.GetString("RecuperaTipoTransacao", resourceCulture);
             }
         }
     }

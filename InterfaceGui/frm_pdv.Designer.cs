@@ -55,10 +55,8 @@
             label_total = new Label();
             textBox_total = new TextBox();
             panel3 = new Panel();
-            btn_pix = new Button();
-            btn_dinheiro = new Button();
-            btn_credito = new Button();
-            btn_debito = new Button();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
@@ -231,6 +229,7 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(button2);
             panel4.Controls.Add(label_resultado);
             panel4.Controls.Add(textBox_resultado);
             panel4.Controls.Add(label_divisao);
@@ -340,54 +339,36 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(btn_pix);
-            panel3.Controls.Add(btn_dinheiro);
-            panel3.Controls.Add(btn_credito);
-            panel3.Controls.Add(btn_debito);
+            panel3.Controls.Add(button1);
             panel3.Location = new Point(19, 89);
             panel3.Name = "panel3";
-            panel3.Size = new Size(233, 102);
+            panel3.Size = new Size(233, 71);
             panel3.TabIndex = 0;
             // 
-            // btn_pix
+            // button1
             // 
-            btn_pix.BackColor = SystemColors.Control;
-            btn_pix.Location = new Point(140, 64);
-            btn_pix.Name = "btn_pix";
-            btn_pix.Size = new Size(90, 35);
-            btn_pix.TabIndex = 3;
-            btn_pix.Text = "Pix";
-            btn_pix.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.Red;
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(16, 10);
+            button1.Name = "button1";
+            button1.Size = new Size(202, 45);
+            button1.TabIndex = 2;
+            button1.Text = "Cancelar Venda";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // btn_dinheiro
+            // button2
             // 
-            btn_dinheiro.BackColor = SystemColors.Control;
-            btn_dinheiro.Location = new Point(0, 64);
-            btn_dinheiro.Name = "btn_dinheiro";
-            btn_dinheiro.Size = new Size(90, 35);
-            btn_dinheiro.TabIndex = 2;
-            btn_dinheiro.Text = "Dinheiro";
-            btn_dinheiro.UseVisualStyleBackColor = false;
-            // 
-            // btn_credito
-            // 
-            btn_credito.BackColor = SystemColors.Control;
-            btn_credito.Location = new Point(140, 3);
-            btn_credito.Name = "btn_credito";
-            btn_credito.Size = new Size(90, 35);
-            btn_credito.TabIndex = 1;
-            btn_credito.Text = "Crédito";
-            btn_credito.UseVisualStyleBackColor = false;
-            // 
-            // btn_debito
-            // 
-            btn_debito.BackColor = SystemColors.Control;
-            btn_debito.Location = new Point(3, 3);
-            btn_debito.Name = "btn_debito";
-            btn_debito.Size = new Size(90, 35);
-            btn_debito.TabIndex = 0;
-            btn_debito.Text = "Débito";
-            btn_debito.UseVisualStyleBackColor = false;
+            button2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.ControlText;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.TopLeft;
+            button2.Location = new Point(0, 255);
+            button2.Name = "button2";
+            button2.Size = new Size(233, 73);
+            button2.TabIndex = 8;
+            button2.Text = "Pagamento";
+            button2.UseVisualStyleBackColor = true;
             // 
             // frm_pdv
             // 
@@ -421,10 +402,6 @@
         private Panel panel_label;
         private Label label1;
         private Panel panel3;
-        private Button btn_pix;
-        private Button btn_dinheiro;
-        private Button btn_credito;
-        private Button btn_debito;
         private Panel panel4;
         public DataGridView dataGridView2;
         private Label label_total;
@@ -444,5 +421,7 @@
         private DataGridViewTextBoxColumn Cor;
         private DataGridViewTextBoxColumn Quantidade;
         private DataGridViewTextBoxColumn Total;
+        private Button button2;
+        private Button button1;
     }
 }
