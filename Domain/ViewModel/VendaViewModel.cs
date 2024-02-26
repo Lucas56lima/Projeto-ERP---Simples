@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain.Commands;
-using Domain.Enums;
+﻿using Domain.Commands;
 
 namespace Domain.ViewModel
 {
@@ -15,14 +9,14 @@ namespace Domain.ViewModel
         public int quantidade { get; set; }
         public DateTime data { get; set; }
 
-        public ETransacoes CodTransacao { get; set; }
+        public string CodTransacao { get; set; }
         
         public int documento { get; set; }
         public int serie {get; set; }
         public decimal valorTotal {get; set; }
 
-        public EPagamentos CodPagamento { get; set; }
-        public EOperadoras CodOperadora { get; set; }
+        public string CodPagamento { get; set; }
+        public string CodOperadora { get; set; }
 
     }
 }

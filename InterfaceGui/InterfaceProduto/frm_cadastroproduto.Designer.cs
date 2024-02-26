@@ -151,7 +151,7 @@ namespace InterfaceGui.InterfaceProduto
             listBox_marca.ItemHeight = 20;
             listBox_marca.Location = new Point(124, 135);
             listBox_marca.Name = "listBox_marca";
-            listBox_marca.Size = new Size(100, 24);
+            listBox_marca.Size = new Size(147, 24);
             listBox_marca.TabIndex = 25;
             // 
             // textBox_preco
@@ -206,7 +206,7 @@ namespace InterfaceGui.InterfaceProduto
             listBox_subcategoria.ItemHeight = 20;
             listBox_subcategoria.Location = new Point(124, 105);
             listBox_subcategoria.Name = "listBox_subcategoria";
-            listBox_subcategoria.Size = new Size(100, 24);
+            listBox_subcategoria.Size = new Size(147, 24);
             listBox_subcategoria.TabIndex = 16;
             // 
             // label2
@@ -228,7 +228,7 @@ namespace InterfaceGui.InterfaceProduto
             listBox_cor.ItemHeight = 20;
             listBox_cor.Location = new Point(124, 75);
             listBox_cor.Name = "listBox_cor";
-            listBox_cor.Size = new Size(100, 24);
+            listBox_cor.Size = new Size(147, 24);
             listBox_cor.TabIndex = 14;
             // 
             // label_categoria
@@ -250,7 +250,7 @@ namespace InterfaceGui.InterfaceProduto
             listBox_categoria.ItemHeight = 20;
             listBox_categoria.Location = new Point(124, 10);
             listBox_categoria.Name = "listBox_categoria";
-            listBox_categoria.Size = new Size(100, 24);
+            listBox_categoria.Size = new Size(147, 24);
             listBox_categoria.TabIndex = 11;
             // 
             // textBox_descricao
@@ -292,16 +292,17 @@ namespace InterfaceGui.InterfaceProduto
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            int categoria = listBox_categoria.SelectedIndex * -1;
+            int categoriaSelected = listBox_categoria.SelectedIndex * -1;
             string descricao = textBox_descricao.Text;
-            int cor = listBox_cor.SelectedIndex * -1;
-            int subCategoria = listBox_subcategoria.SelectedIndex * -1;
-            int marca = listBox_marca.SelectedIndex * -1;
+            int corSelected = listBox_cor.SelectedIndex * -1;
+            int subCategoriaSelected = listBox_subcategoria.SelectedIndex * -1;
+            int marcaSelected = listBox_subcategoria.SelectedIndex * -1;
             double preco = Convert.ToDouble(textBox_preco.Text);
             
-
-            
-
+            string cor = listBox_cor.Items[corSelected].ToString();
+            string categoria = listBox_categoria.Items[categoriaSelected].ToString();
+            string marca = listBox_marca.Items[marcaSelected].ToString();
+            string subCategoria = listBox_subcategoria.Items[subCategoriaSelected].ToString();
             if (descricao == "" || descricao == null)
             {
                 MessageBox.Show("Todos os campos são obrigatórios!");
@@ -316,10 +317,10 @@ namespace InterfaceGui.InterfaceProduto
                     codigoProduto = codigoProduto,
                     descricao = descricao,
                     precoProduto = Convert.ToDecimal(preco),
-                    categoria = (Domain.Enums.ECategoria)categoria,
-                    subCategoria = (Domain.Enums.ESubCategoria)subCategoria,
-                    marca = (Domain.Enums.EMarca)marca,
-                    cor = (Domain.Enums.ECor)cor,
+                    categoria = categoria,
+                    subCategoria = subCategoria,
+                    marca = marca,
+                    cor = cor,
                 };           
             
                 await _produtoService.PostAsync(command);

@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\commands\\categoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\commands\\categoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\service\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|solutionrelative:service\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\commands\\produtoinfocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\commands\\produtoinfocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\produtoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\produtoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\viewmodel\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\viewmodel\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,109 +54,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Program.cs",
-              "RelativeDocumentMoniker": "Application\\Program.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Program.cs",
-              "RelativeToolTip": "Application\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAgwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T18:21:00.338Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frm_pagamentos.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\frm_pagamentos.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs [Projeto]",
-              "RelativeToolTip": "InterfaceGui\\frm_pagamentos.cs [Projeto]",
+              "Title": "frm_cadastroproduto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "ViewState": "AQIAADIBAAAAAAAAAAAtwD4BAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T13:23:35.011Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-02-26T18:51:37.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frm_pdv.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\frm_pdv.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs [Projeto]",
-              "RelativeToolTip": "InterfaceGui\\frm_pdv.cs [Projeto]",
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\ProdutoRepository.cs",
+              "ViewState": "AQIAALYAAAAAAAAAAAAgwMAAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T13:08:59.001Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frm_pdv.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\frm_pdv.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pdv.cs",
-              "RelativeToolTip": "InterfaceGui\\frm_pdv.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAYwIsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T13:05:35.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProdutoInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\ProdutoInfo.cs",
-              "RelativeDocumentMoniker": "Domain\\Entidades\\ProdutoInfo.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\ProdutoInfo.cs",
-              "RelativeToolTip": "Domain\\Entidades\\ProdutoInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T12:15:44.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProdutoInfoCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoInfoCommand.cs",
-              "RelativeDocumentMoniker": "Domain\\Commands\\ProdutoInfoCommand.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoInfoCommand.cs",
-              "RelativeToolTip": "Domain\\Commands\\ProdutoInfoCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T12:15:27.599Z",
+              "WhenOpened": "2024-02-26T17:48:30.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "VendasRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\VendasRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\VendasRepository.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA7wBMAAAAVAAAA",
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "Service\\Services\\ProdutoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T11:29:08.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VendaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\VendaViewModel.cs",
-              "RelativeDocumentMoniker": "Domain\\ViewModel\\VendaViewModel.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\VendaViewModel.cs",
-              "RelativeToolTip": "Domain\\ViewModel\\VendaViewModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T12:34:59.517Z",
+              "WhenOpened": "2024-02-26T18:50:44.552Z",
               "EditorCaption": ""
             },
             {
@@ -173,28 +109,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EstoqueRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\EstoqueRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\EstoqueRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\EstoqueRepository.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAkwDMAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "CategoriaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\CategoriaCommand.cs",
+              "RelativeDocumentMoniker": "Domain\\Commands\\CategoriaCommand.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\CategoriaCommand.cs",
+              "RelativeToolTip": "Domain\\Commands\\CategoriaCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T19:40:13.401Z",
+              "WhenOpened": "2024-02-26T17:33:39.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Estoque.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Estoque.cs",
-              "RelativeDocumentMoniker": "Domain\\Entidades\\Estoque.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Estoque.cs",
-              "RelativeToolTip": "Domain\\Entidades\\Estoque.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Categoria.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Categoria.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Categoria.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Categoria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T19:43:15.731Z",
+              "WhenOpened": "2024-02-26T17:32:50.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frm_cadastroproduto.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T19:08:41.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VendasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAtwE8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T18:51:02.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frm_pagamentos.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\frm_pagamentos.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
+              "RelativeToolTip": "InterfaceGui\\frm_pagamentos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T18:51:29.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frm_consultarproduto.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs [Projeto]",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:58:47.498Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frm_consultarproduto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:58:39.19Z",
               "EditorCaption": ""
             }
           ]

@@ -39,37 +39,36 @@ namespace Infrastructure.Repository
             try
             {
                 string queryInserir = _consultaSQL.ObterConsulta("InserirProduto");
-                string postEstoque = _consultaSQL.ObterConsulta("InserirEstoqueProduto");
-                string getNumCategoria = _consultaSQL.ObterConsulta("RecuperaCategoria");
+                string postEstoque = _consultaSQL.ObterConsulta("InserirEstoqueProduto");                
                 string updateCategoria = _consultaSQL.ObterConsulta("AtualizaCategoria");
+                string getNumCategoria = _consultaSQL.ObterConsulta("RecuperaCategoria");
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
-                {
-                    
+                {                    
                         ///<sumary>
                         ///Try valida se as consultas no banco foram bem sucedidas antes de executar a queryInserir
                         /// </sumary>
                         try
                         {
                             // Obtenha o número da categoria
-                            var numCategoria = conn.Query<int>(getNumCategoria, new { categoria = (int)command.categoria }).FirstOrDefault();
-                            // Crie o código do produto usando o número da categoria, marca e cor
-                            var codigoProduto = await GeraCodigoProdutoAutomatico(Convert.ToInt32(command.marca), Convert.ToInt32(command.cor), Convert.ToInt32(command.categoria));
-
+                           
+                        // Crie o código do produto usando o número da categoria, marca e cor
+                            var codigoProduto = await GeraCodigoProdutoAutomatico(command.marca,command.cor,command.categoria );
+                        var numCategoria = conn.Query<int>(getNumCategoria, new { nomeCategoria = command.categoria }).FirstOrDefault();
                             // Execute a inserção na tabela
                             await conn.ExecuteAsync(queryInserir, new
                             {
                                 descricao = string.IsNullOrWhiteSpace(command.descricao) ? string.Empty : command.descricao,
                                 precoProduto = command.precoProduto,
-                                categoria = (int)command.categoria,
-                                subCategoria = (int)command.subCategoria,
-                                marca = (int)command.marca,
-                                cor = (int)command.cor,
+                                categoria = command.categoria,
+                                subCategoria = command.subCategoria,
+                                marca = command.marca,
+                                cor = command.cor,
                                 codigoProduto = codigoProduto
 
                             });
 
-                            await conn.ExecuteAsync(updateCategoria, new { numCategoria = numCategoria, categoria = (int)command.categoria });
+                            await conn.ExecuteAsync(updateCategoria, new { numCategoria = numCategoria, categoria = command.categoria });
                             await conn.ExecuteAsync(postEstoque, new { codigoProduto = codigoProduto, descricao = command.descricao });
                             
                             return "Produto Cadastrado com sucesso!";
@@ -112,10 +111,10 @@ namespace Infrastructure.Repository
                     codigoProduto = codigoProduto,
                     descricao = string.IsNullOrWhiteSpace(command.descricao) ? string.Empty : command.descricao,
                     precoProduto = command.precoProduto,
-                    categoria = (int)command.categoria,
-                    subCategoria = (int)command.subCategoria,
-                    marca = (int)command.marca,
-                    cor = (int)command.cor,
+                    categoria = command.categoria,
+                    subCategoria = command.subCategoria,
+                    marca = command.marca,
+                    cor = command.cor,
                 });
             }
             return "Produto Atualizado com sucesso";
@@ -169,17 +168,25 @@ namespace Infrastructure.Repository
         /// <param name="cor">O ID da cor do produto.</param>
         /// <param name="categoria">O ID da categoria do produto.</param>
         /// <returns>O código de produto gerado.</returns>
-        public async Task<int> GeraCodigoProdutoAutomatico(int marca, int cor, int categoria)
+        public async Task<int> GeraCodigoProdutoAutomatico(string marca, string cor, string categoria)
         {
             string getNumCategoria = _consultaSQL.ObterConsulta("RecuperaCategoria");
-
+            string getCategoriaID = _consultaSQL.ObterConsulta("RecuperaIDCategoria");
+            string getMarcaID = _consultaSQL.ObterConsulta("RecuperaIDMarca");
+            string getCorID = _consultaSQL.ObterConsulta("RecuperaIDCor");
             await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 int numCategoria;
+                int categoriaID;
+                int marcaID;
+                int corID;
                 try 
-                { 
-                // Obtenha o número da categoria
-                   numCategoria = conn.Query<int>(getNumCategoria, new { categoria = categoria }).FirstOrDefault();
+                {
+                    // Obtenha o número da categoria
+                   categoriaID = conn.Query<int>(getCategoriaID, new { nomeCategoria = categoria }).FirstOrDefault();
+                   numCategoria = conn.Query<int>(getNumCategoria, new { categoriaID = categoriaID }).FirstOrDefault();
+                   marcaID = conn.Query<int>(getMarcaID, new {nomeMarca = marca}).FirstOrDefault();
+                   corID = conn.Query<int>(getCorID, new { nomeCor = cor }).FirstOrDefault();
                 }
                 catch(Exception ex) 
                 {
@@ -187,11 +194,104 @@ namespace Infrastructure.Repository
                 };
 
                 // Crie o código do produto usando o número da categoria, marca e cor
-                var codigoProduto = $"{numCategoria}{marca}{cor}";
+                var codigoProduto = $"{numCategoria}{marcaID}{corID}";
 
                 return Convert.ToInt32(codigoProduto);
             }
-        }        
+        }
+        /// <summary>
+        /// Busca informações como o ID e o nome das marcas disponíveis.
+        /// </summary>       
+        /// <returns> Retorna uma lista das marcas </returns>
+
+        public async Task<IEnumerable<MarcaCommand>> GetMarca()
+        {
+            string queryGetMarca = _consultaSQL.ObterConsulta("RecuperaMarca");
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                SqlTransaction tran = conn.BeginTransaction();
+                try
+                {
+                    tran.Commit(); 
+                    return await conn.QueryAsync<MarcaCommand>(queryGetMarca, transaction: tran);
+                }
+                catch (SqlException ex)
+                {
+                    tran.Rollback(); // Revertendo a transação em caso de exceção SQL                   
+                    throw new Exception("Erro ao conectar com o banco!",ex);                                                                                          
+                }
+            }
+        }
+        /// <summary>
+        /// Busca informações como o ID e o nome das cores disponíveis.
+        /// </summary>       
+        /// <returns> Retorna uma lista das cores </returns>
+        public async Task<IEnumerable<CorCommand>> GetCor()
+        {
+            string queryGetCor = _consultaSQL.ObterConsulta("RecuperaCor");
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                SqlTransaction tran = conn.BeginTransaction();
+                try
+                {
+                    tran.Commit();
+                    return await conn.QueryAsync<CorCommand>(queryGetCor, transaction: tran);
+                }
+                catch (SqlException ex)
+                {
+                    tran.Rollback(); // Revertendo a transação em caso de exceção SQL                   
+                    throw new Exception("Erro ao conectar com o banco!", ex);
+                }
+            }
+        }
+        /// <summary>
+        /// Busca informações como o ID e o nome das categorias disponíveis.
+        /// </summary>       
+        /// <returns> Retorna uma lista das categorias </returns>
+        public async Task<IEnumerable<CategoriaCommand>> GetCategoria()
+        {
+            string queryGetCategoria = _consultaSQL.ObterConsulta("RecuperaInfoCategoria");
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                SqlTransaction tran = conn.BeginTransaction();
+                try
+                {
+                    tran.Commit();
+                    return await conn.QueryAsync<CategoriaCommand>(queryGetCategoria, transaction: tran);
+                }
+                catch (SqlException ex)
+                {
+                    tran.Rollback(); // Revertendo a transação em caso de exceção SQL                   
+                    throw new Exception("Erro ao conectar com o banco!", ex);
+                }
+            }
+        }
+        /// <summary>
+        /// Busca informações como o ID e o nome das subcategorias disponíveis.
+        /// </summary>       
+        /// <returns> Retorna uma lista das subcategorias </returns>
+        public async Task<IEnumerable<SubCategoriaCommand>> GetSubcategoria()
+        {
+            string queryGetSubCategoria = _consultaSQL.ObterConsulta("RecuperaSubCategoria");
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                SqlTransaction tran = conn.BeginTransaction();
+                try
+                {
+                    tran.Commit();
+                    return await conn.QueryAsync<SubCategoriaCommand>(queryGetSubCategoria, transaction: tran);
+                }
+                catch (SqlException ex)
+                {
+                    tran.Rollback(); // Revertendo a transação em caso de exceção SQL                   
+                    throw new Exception("Erro ao conectar com o banco!", ex);
+                }
+            }
+        }
     }       
 }
 

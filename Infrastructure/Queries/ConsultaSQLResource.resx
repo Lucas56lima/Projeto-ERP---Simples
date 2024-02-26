@@ -131,8 +131,9 @@ subCategoria = @subCategoria,marca = @marca,cor = @cor WHERE codigoProduto = @co
     <comment>Atualiza informações do produto.</comment>
   </data>
   <data name="ConsultaProdutoEstoque" xml:space="preserve">
-    <value>SELECT *, quantidade FROM CadastroProduto as A INNER JOIN Estoque as B
-ON codigoProduto = produto</value>
+    <value>SELECT CadastroProduto.*, quantidade 
+FROM CadastroProduto 
+INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto</value>
     <comment>Consulta produto e estoque.</comment>
   </data>
   <data name="ConsultaProdutoFiltroEstoqueCodigo" xml:space="preserve">
@@ -168,14 +169,38 @@ INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE Cada
     <comment>Insere vendas no relatório.</comment>
   </data>
   <data name="RecuperaCategoria" xml:space="preserve">
-    <value>SELECT numero FROM CadCategoria WHERE categoriaID=@categoria</value>
+    <value>SELECT numero FROM CadCategoria WHERE categoriaID=@categoriaID</value>
     <comment>Busca os numeros das categorias disponíveis.</comment>
+  </data>
+  <data name="RecuperaCor" xml:space="preserve">
+    <value>SELECT * FROM CadCor</value>
+    <comment>Recupera cores disponíveis.</comment>
+  </data>
+  <data name="RecuperaIDCategoria" xml:space="preserve">
+    <value>SELECT categoriaID FROM CadCor WHERE nomeCategoria = @nomeCategoria</value>
+    <comment>Recuperar ID da categoria escolhida.</comment>
+  </data>
+  <data name="RecuperaIDCor" xml:space="preserve">
+    <value>SELECT corID FROM CadCor WHERE nomeCor = @nomeCor</value>
+    <comment>Recupera ID da cor escolhida.</comment>
+  </data>
+  <data name="RecuperaIDMarca" xml:space="preserve">
+    <value>SELECT marcaID FROM CadMarca WHERE nomeMarca = @nomeMarca</value>
+    <comment>Recupera ID da marca escolhida.</comment>
+  </data>
+  <data name="RecuperaInfoCategoria" xml:space="preserve">
+    <value>SELECT * FROM CadCategoria</value>
+    <comment>Recupera categorias disponíveis.</comment>
   </data>
   <data name="RecuperaInformacoesEstoque" xml:space="preserve">
     <value>SELECT Estoque.descricao,Estoque.quantidade,Estoque.valorUnitario, precoProduto 
 FROM CadastroProduto 
 INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE CadastroProduto.codigoProduto = @codigoProduto</value>
     <comment>Recupera informações de estoque e preço do produto.</comment>
+  </data>
+  <data name="RecuperaMarca" xml:space="preserve">
+    <value>SELECT * FROM CadMarca</value>
+    <comment>Recupera marcas disponíveis.</comment>
   </data>
   <data name="RecuperaOperadoraCartao" xml:space="preserve">
     <value>SELECT nomeOperadora FROM CadOperadora WHERE operadoraID= @Codoperadora</value>
@@ -184,6 +209,10 @@ INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE Cada
   <data name="RecuperaPrecoProduto" xml:space="preserve">
     <value>SELECT precoProduto FROM CadastroProduto WHERE codigoProduto = @produto</value>
     <comment>Recupera preço do produto.</comment>
+  </data>
+  <data name="RecuperaSubCategoria" xml:space="preserve">
+    <value>SELECT * FROM CadSubCategoria</value>
+    <comment>Recupera subcategorias disponiveis.</comment>
   </data>
   <data name="RecuperaTipoPagamento" xml:space="preserve">
     <value>SELECT nomePagamento FROM CadPagamento WHERE pagamentoID= @Codpagamento</value>

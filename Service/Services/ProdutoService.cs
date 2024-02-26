@@ -1,6 +1,5 @@
 ﻿using Domain.Commands;
 using Domain.Interface;
-using Infrastructure.Repository;
 
 namespace Service.Services
 {
@@ -11,7 +10,7 @@ namespace Service.Services
         {
             _repository = repository;
         }
-        public async Task<int> GeraCodigoProdutoAutomatico(int marca, int cor, int categoria)
+        public async Task<int> GeraCodigoProdutoAutomatico(string marca, string cor, string categoria)
         {
             return await _repository.GeraCodigoProdutoAutomatico(marca,cor,categoria);
         }
@@ -24,6 +23,27 @@ namespace Service.Services
 
             return await _repository.GetAsyncProduto(codigoProduto,descricao);
         }
+
+        public async Task<IEnumerable<CategoriaCommand>> GetCategoria()
+        {
+            return await _repository.GetCategoria();
+        }
+
+        public async Task<IEnumerable<CorCommand>> GetCor()
+        {
+            return await _repository.GetCor();
+        }
+
+        public async Task<IEnumerable<MarcaCommand>> GetMarca()
+        {
+            return await _repository.GetMarca();
+        }
+
+        public async Task<IEnumerable<SubCategoriaCommand>> GetSubcategoria()
+        {
+            return await _repository.GetSubcategoria();
+        }
+
         public async Task<string> PostAsync(ProdutoCommand command)
         {
 

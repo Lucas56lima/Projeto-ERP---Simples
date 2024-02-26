@@ -89,8 +89,9 @@ namespace Infrastructure.Queries {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT *, quantidade FROM CadastroProduto as A INNER JOIN Estoque as B
-        ///ON codigoProduto = produto.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT CadastroProduto.*, quantidade 
+        ///FROM CadastroProduto 
+        ///INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto.
         /// </summary>
         internal static string ConsultaProdutoEstoque {
             get {
@@ -161,11 +162,56 @@ namespace Infrastructure.Queries {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT numero FROM CadCategoria WHERE categoriaID=@categoria.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT numero FROM CadCategoria WHERE categoriaID=@categoriaID.
         /// </summary>
         internal static string RecuperaCategoria {
             get {
                 return ResourceManager.GetString("RecuperaCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadCor.
+        /// </summary>
+        internal static string RecuperaCor {
+            get {
+                return ResourceManager.GetString("RecuperaCor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT categoriaID FROM CadCor WHERE nomeCategoria = @nomeCategoria.
+        /// </summary>
+        internal static string RecuperaIDCategoria {
+            get {
+                return ResourceManager.GetString("RecuperaIDCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT corID FROM CadCor WHERE nomeCor = @nomeCor.
+        /// </summary>
+        internal static string RecuperaIDCor {
+            get {
+                return ResourceManager.GetString("RecuperaIDCor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT marcaID FROM CadMarca WHERE nomeMarca = @nomeMarca.
+        /// </summary>
+        internal static string RecuperaIDMarca {
+            get {
+                return ResourceManager.GetString("RecuperaIDMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadCategoria.
+        /// </summary>
+        internal static string RecuperaInfoCategoria {
+            get {
+                return ResourceManager.GetString("RecuperaInfoCategoria", resourceCulture);
             }
         }
         
@@ -177,6 +223,15 @@ namespace Infrastructure.Queries {
         internal static string RecuperaInformacoesEstoque {
             get {
                 return ResourceManager.GetString("RecuperaInformacoesEstoque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadMarca.
+        /// </summary>
+        internal static string RecuperaMarca {
+            get {
+                return ResourceManager.GetString("RecuperaMarca", resourceCulture);
             }
         }
         
@@ -195,6 +250,15 @@ namespace Infrastructure.Queries {
         internal static string RecuperaPrecoProduto {
             get {
                 return ResourceManager.GetString("RecuperaPrecoProduto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadSubCategoria.
+        /// </summary>
+        internal static string RecuperaSubCategoria {
+            get {
+                return ResourceManager.GetString("RecuperaSubCategoria", resourceCulture);
             }
         }
         

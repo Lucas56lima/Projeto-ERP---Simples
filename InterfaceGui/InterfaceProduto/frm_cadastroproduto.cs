@@ -1,52 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Domain.Enums;
-using Domain.Interface;
+﻿using Domain.Interface;
 
 namespace InterfaceGui.InterfaceProduto
 {
     public partial class frm_cadastroproduto : Form
     {
-
         private readonly IProdutoService _produtoService;
         public frm_cadastroproduto(IProdutoService produtoService)
         {
-
-
             _produtoService = produtoService;
             InitializeComponent();
-
-            PreencheEnums();
-
+            PreencheCaracteristicas();
         }
 
-        private void PreencheEnums()
+        private async Task PreencheCaracteristicas()
         {
-            foreach (EMarca marca in Enum.GetValues(typeof(EMarca)))
-            {
-                listBox_marca.Items.Add(marca);
+            var marcas = await _produtoService.GetMarca();
+            foreach (var marca in marcas)
+            {                
+                string nomeMarca = marca.nomeMarca;
+                listBox_marca.Items.Add(nomeMarca);
             }
 
-            foreach (ECategoria categoria in Enum.GetValues(typeof(ECategoria)))
+            var cores = await _produtoService.GetCor();
+            foreach (var cor in cores)
             {
-                listBox_categoria.Items.Add(categoria);
+                string nomeCor = cor.nomeCor;
+                listBox_cor.Items.Add(nomeCor);
             }
 
-            foreach (ECor cor in Enum.GetValues(typeof(ECor)))
+            var categorias = await _produtoService.GetCategoria();
+            foreach (var categoria in categorias)
             {
-                listBox_cor.Items.Add(cor);
+                string nomeCategoria = categoria.nomeCategoria;
+                listBox_categoria.Items.Add(nomeCategoria);
             }
 
-            foreach (ESubCategoria subCategoria in Enum.GetValues(typeof(ESubCategoria)))
+            var subCategorias = await _produtoService.GetSubcategoria();
+            foreach (var subCategoria in subCategorias)
             {
-                listBox_subcategoria.Items.Add(subCategoria);
+                string nomeSubCategoria = subCategoria.nomeSubCategoria;
+                listBox_subcategoria.Items.Add(nomeSubCategoria);
             }
         }
     }
