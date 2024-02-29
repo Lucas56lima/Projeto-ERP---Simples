@@ -3,48 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\commands\\categoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\commands\\categoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\service\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\service\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|solutionrelative:service\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_cadastroproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\viewmodel\\produtoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\viewmodel\\produtoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\application\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C682EF50-7587-451D-B60F-F3D806011C50}|Application\\Application.csproj|solutionrelative:application\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\domain\\interface\\iprodutoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\interface\\iprodutoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\domain\\interface\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\interface\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\application\\service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FE379803-91BC-4EA5-8B4A-7EA3D35643B4}|Service\\Service.csproj|solutionrelative:service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\interfaceproduto\\frm_consultarproduto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\queries\\consultasqlresource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\queries\\consultasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\queries\\consultasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\domain\\interface\\iconsultasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\interface\\iconsultasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\domain\\commands\\produtocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3990B763-FF42-4014-A7C6-8E29CF4EF241}|Domain\\Domain.csproj|solutionrelative:domain\\commands\\produtocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EC94238-EDEE-49F5-A66E-D6EBEF73044E}|InterfaceGui\\InterfaceGui.csproj|solutionrelative:interfacegui\\frm_pagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A7899A-6318-4258-A6BB-04CE2B4E9092}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\vendasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,127 +86,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frm_cadastroproduto.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
-              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
-              "ViewState": "AQIAADIBAAAAAAAAAAAtwD4BAAAsAAAA",
+              "Title": "frm_cadastroproduto.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs [Projeto]",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T18:51:37.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-29T16:32:57.138Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProdutoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\ProdutoRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\ProdutoRepository.cs",
-              "ViewState": "AQIAALYAAAAAAAAAAAAgwMAAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T17:48:30.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ProdutoService.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Services\\ProdutoService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\ProdutoService.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Services\\ProdutoService.cs",
               "RelativeToolTip": "Service\\Services\\ProdutoService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAgwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-26T18:50:44.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConsultaSQLResource.resx",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
-              "RelativeDocumentMoniker": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
-              "RelativeToolTip": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-02-20T11:30:39.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CategoriaCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\CategoriaCommand.cs",
-              "RelativeDocumentMoniker": "Domain\\Commands\\CategoriaCommand.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\CategoriaCommand.cs",
-              "RelativeToolTip": "Domain\\Commands\\CategoriaCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\ProdutoRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\ProdutoRepository.cs",
+              "ViewState": "AQIAAP4AAAAAAAAAAAAcwGcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T17:33:39.562Z",
+              "WhenOpened": "2024-02-26T17:48:30.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Categoria.cs",
-              "RelativeDocumentMoniker": "Domain\\Entidades\\Categoria.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Entidades\\Categoria.cs",
-              "RelativeToolTip": "Domain\\Entidades\\Categoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Title": "frm_cadastroproduto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.Designer.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAowFwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T17:32:50.334Z",
+              "WhenOpened": "2024-02-29T13:31:10.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "frm_cadastroproduto.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
               "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
               "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_cadastroproduto.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T19:08:41.458Z",
+              "WhenOpened": "2024-02-29T13:31:06.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VendasRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\VendasRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\VendasRepository.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAtwE8AAAAnAAAA",
+              "DocumentIndex": 5,
+              "Title": "ProdutoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\ProdutoViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModel\\ProdutoViewModel.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\ViewModel\\ProdutoViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModel\\ProdutoViewModel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T18:51:02.94Z",
+              "WhenOpened": "2024-02-29T15:44:18.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Application\\Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Application\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Application\\Controllers\\ProdutoController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwA0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T15:43:10.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "frm_pagamentos.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\frm_pagamentos.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
-              "RelativeToolTip": "InterfaceGui\\frm_pagamentos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAGAAAA",
+              "Title": "IProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IProdutoService.cs",
+              "RelativeDocumentMoniker": "Domain\\Interface\\IProdutoService.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IProdutoService.cs",
+              "RelativeToolTip": "Domain\\Interface\\IProdutoService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T18:51:29.839Z",
+              "WhenOpened": "2024-02-27T11:35:38.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interface\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IProdutoRepository.cs",
+              "RelativeToolTip": "Domain\\Interface\\IProdutoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T15:17:23.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "frm_consultarproduto.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T15:07:47.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Service",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Service.csproj",
+              "RelativeDocumentMoniker": "Service\\Service.csproj",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Service\\Service.csproj",
+              "RelativeToolTip": "Service\\Service.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-29T15:18:09.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frm_consultarproduto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAtwCEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:58:39.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "frm_consultarproduto.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
               "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.cs",
@@ -186,16 +257,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frm_consultarproduto.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
-              "RelativeDocumentMoniker": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
-              "RelativeToolTip": "InterfaceGui\\InterfaceProduto\\frm_consultarproduto.Designer.cs",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T13:58:39.19Z",
+              "DocumentIndex": 13,
+              "Title": "ConsultaSQLResource.resx",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "RelativeDocumentMoniker": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "RelativeToolTip": "Infrastructure\\Queries\\ConsultaSQLResource.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-02-20T11:30:39.865Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ConsultaSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQL.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Queries\\ConsultaSQL.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Queries\\ConsultaSQL.cs",
+              "RelativeToolTip": "Infrastructure\\Queries\\ConsultaSQL.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:22:03.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IConsultaSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IConsultaSQL.cs",
+              "RelativeDocumentMoniker": "Domain\\Interface\\IConsultaSQL.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Interface\\IConsultaSQL.cs",
+              "RelativeToolTip": "Domain\\Interface\\IConsultaSQL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:22:41.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProdutoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoCommand.cs",
+              "RelativeDocumentMoniker": "Domain\\Commands\\ProdutoCommand.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Domain\\Commands\\ProdutoCommand.cs",
+              "RelativeToolTip": "Domain\\Commands\\ProdutoCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T11:32:52.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VendasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\Infrastructure\\Repository\\VendasRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\VendasRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAtwE8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T18:51:02.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frm_pagamentos.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
+              "RelativeDocumentMoniker": "InterfaceGui\\frm_pagamentos.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\Application\\InterfaceGui\\frm_pagamentos.cs",
+              "RelativeToolTip": "InterfaceGui\\frm_pagamentos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T18:51:29.839Z"
             }
           ]
         }

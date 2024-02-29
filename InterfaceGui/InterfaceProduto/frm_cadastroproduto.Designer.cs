@@ -40,6 +40,7 @@ namespace InterfaceGui.InterfaceProduto
             label5 = new Label();
             listBox_marca = new ListBox();
             textBox_preco = new TextBox();
+            comboBox_categoria = new ComboBox();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -47,7 +48,7 @@ namespace InterfaceGui.InterfaceProduto
             label2 = new Label();
             listBox_cor = new ListBox();
             label_categoria = new Label();
-            listBox_categoria = new ListBox();
+           
             textBox_descricao = new TextBox();
             label_descricao = new Label();
             panel_cabecalho.SuspendLayout();
@@ -63,6 +64,14 @@ namespace InterfaceGui.InterfaceProduto
             panel_cabecalho.Name = "panel_cabecalho";
             panel_cabecalho.Size = new Size(582, 41);
             panel_cabecalho.TabIndex = 0;
+            // 
+            // comboBox_categoria
+            // 
+            comboBox_categoria.FormattingEnabled = true;
+            comboBox_categoria.Location = new Point(124, 10);
+            comboBox_categoria.Name = "comboBox_categoria";
+            comboBox_categoria.Size = new Size(121, 23);
+            comboBox_categoria.TabIndex = 30;
             // 
             // label_cabecalho
             // 
@@ -80,6 +89,7 @@ namespace InterfaceGui.InterfaceProduto
             panel_cadastro.BackColor = SystemColors.ButtonHighlight;
             panel_cadastro.BorderStyle = BorderStyle.Fixed3D;
             panel_cadastro.Controls.Add(label1);
+            panel_cadastro.Controls.Add(comboBox_categoria);
             panel_cadastro.Controls.Add(btnSalvar);
             panel_cadastro.Controls.Add(textBox_codigo);
             panel_cadastro.Controls.Add(label5);
@@ -92,7 +102,7 @@ namespace InterfaceGui.InterfaceProduto
             panel_cadastro.Controls.Add(label2);
             panel_cadastro.Controls.Add(listBox_cor);
             panel_cadastro.Controls.Add(label_categoria);
-            panel_cadastro.Controls.Add(listBox_categoria);
+            
             panel_cadastro.Controls.Add(textBox_descricao);
             panel_cadastro.Controls.Add(label_descricao);
             panel_cadastro.Location = new Point(12, 58);
@@ -153,6 +163,7 @@ namespace InterfaceGui.InterfaceProduto
             listBox_marca.Name = "listBox_marca";
             listBox_marca.Size = new Size(147, 24);
             listBox_marca.TabIndex = 25;
+            listBox_marca.SelectedIndexChanged += ListBox_marca_SelectedIndexChanged;
             // 
             // textBox_preco
             // 
@@ -244,14 +255,7 @@ namespace InterfaceGui.InterfaceProduto
             // 
             // listBox_categoria
             // 
-            listBox_categoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox_categoria.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox_categoria.FormattingEnabled = true;
-            listBox_categoria.ItemHeight = 20;
-            listBox_categoria.Location = new Point(124, 10);
-            listBox_categoria.Name = "listBox_categoria";
-            listBox_categoria.Size = new Size(147, 24);
-            listBox_categoria.TabIndex = 11;
+            
             // 
             // textBox_descricao
             // 
@@ -290,25 +294,45 @@ namespace InterfaceGui.InterfaceProduto
             ResumeLayout(false);
         }
 
+        private void ListBox_marca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox listBox = sender as ListBox;
+            if (listBox.SelectedIndex != -1)
+            {
+                string valorSelecionado = listBox.SelectedItem.ToString();
+                // Faça o que precisa com o valorSelecionado...
+                MessageBox.Show($"{valorSelecionado}");
+            }           
+        }
+
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            int categoriaSelected = listBox_categoria.SelectedIndex * -1;
+            int categoria = comboBox_categoria.SelectedIndex;
             string descricao = textBox_descricao.Text;
-            int corSelected = listBox_cor.SelectedIndex * -1;
-            int subCategoriaSelected = listBox_subcategoria.SelectedIndex * -1;
-            int marcaSelected = listBox_subcategoria.SelectedIndex * -1;
-            double preco = Convert.ToDouble(textBox_preco.Text);
-            
-            string cor = listBox_cor.Items[corSelected].ToString();
-            string categoria = listBox_categoria.Items[categoriaSelected].ToString();
-            string marca = listBox_marca.Items[marcaSelected].ToString();
-            string subCategoria = listBox_subcategoria.Items[subCategoriaSelected].ToString();
+            int cor = listBox_cor.SelectedIndex;
+            int subCategoria = listBox_subcategoria.SelectedIndex;
+            int marca = listBox_marca.SelectedIndex; // Corrigido para listBox_marca.SelectedIndex
+            double preco;
+
+            MessageBox.Show($"Categoria: {categoria}, Cor: {cor}, Subcategoria: {subCategoria}, Marca: {marca}");
+
+            if (categoria == -1 || cor == -1 || subCategoria == -1 || marca == -1)
+            {
+                MessageBox.Show("Por favor, selecione uma opção em todas as listas.");
+                return;
+            }
+            // Verificando se o preço é válido antes de converter
+            if (!double.TryParse(textBox_preco.Text, out preco))
+            {
+                MessageBox.Show("Por favor, insira um valor válido para o preço.");
+                return;
+            }
+
             if (descricao == "" || descricao == null)
             {
                 MessageBox.Show("Todos os campos são obrigatórios!");
             }
-
-            else 
+            else
             {
                 var codigoProduto = await _produtoService.GeraCodigoProdutoAutomatico(marca, cor, categoria);
                 textBox_codigo.Text = Convert.ToString(codigoProduto);
@@ -321,8 +345,8 @@ namespace InterfaceGui.InterfaceProduto
                     subCategoria = subCategoria,
                     marca = marca,
                     cor = cor,
-                };           
-            
+                };
+
                 await _produtoService.PostAsync(command);
                 MessageBox.Show("Produto Cadastrado com sucesso");
                 textBox_descricao.Text = "";
@@ -330,8 +354,10 @@ namespace InterfaceGui.InterfaceProduto
                 textBox_preco.Text = "0,00";
                 textBox_codigo.Text = "";
                 textBox_codigo.PlaceholderText = "Código";
-            }
-        }
+            }           
+           
+        }        
+
 
         #endregion
 
@@ -341,18 +367,18 @@ namespace InterfaceGui.InterfaceProduto
         private TextBox textBox_descricao;
         private Label label_descricao;
         private Label label_categoria;
-        private ListBox listBox_categoria;
         private Label label4;
         private Label label3;
-        private ListBox listBox_subcategoria;
         private Label label2;
-        private ListBox listBox_cor;
         private TextBox textBox_preco;
         private Label label6;
         private TextBox textBox_codigo;
         private Label label5;
-        private ListBox listBox_marca;
         private Button btnSalvar;
-        private Label label1;
+        private Label label1;        
+        public ListBox listBox_subcategoria;
+        public ListBox listBox_cor;
+        public ListBox listBox_marca;
+        private ComboBox comboBox_categoria;
     }
 }

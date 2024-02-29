@@ -1,5 +1,7 @@
 ﻿using Domain.Commands;
+using Domain.Entidades;
 using Domain.Interface;
+using Domain.ViewModel;
 
 namespace Service.Services
 {
@@ -10,15 +12,15 @@ namespace Service.Services
         {
             _repository = repository;
         }
-        public async Task<int> GeraCodigoProdutoAutomatico(string marca, string cor, string categoria)
+        public async Task<int> GeraCodigoProdutoAutomatico(int marca, int cor, int categoria)
         {
             return await _repository.GeraCodigoProdutoAutomatico(marca,cor,categoria);
         }
-        public async Task<IEnumerable<ProdutoCommand>> GetAsyncList()
+        public async Task<IEnumerable<ProdutoViewModel>> GetAsyncList()
         {
             return await _repository.GetAsyncList();
         }
-        public async Task<IEnumerable<ProdutoCommand>> GetAsyncProduto(int codigoProduto, string? descricao)
+        public async Task<IEnumerable<ProdutoViewModel>> GetAsyncProduto(int codigoProduto, string? descricao)
         {
 
             return await _repository.GetAsyncProduto(codigoProduto,descricao);

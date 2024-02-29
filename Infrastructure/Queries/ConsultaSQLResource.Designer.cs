@@ -236,6 +236,42 @@ namespace Infrastructure.Queries {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadCategoria WHERE categoriaID = @categoria.
+        /// </summary>
+        internal static string RecuperaNomeCategoria {
+            get {
+                return ResourceManager.GetString("RecuperaNomeCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadCor WHERE corID = @cor.
+        /// </summary>
+        internal static string RecuperaNomeCor {
+            get {
+                return ResourceManager.GetString("RecuperaNomeCor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadMarca WHERE marcaID = @marca.
+        /// </summary>
+        internal static string RecuperaNomeMarca {
+            get {
+                return ResourceManager.GetString("RecuperaNomeMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT * FROM CadSubCategoria WHERE subCategoriaID = @subCategoria.
+        /// </summary>
+        internal static string RecuperaNomeSubCategoria {
+            get {
+                return ResourceManager.GetString("RecuperaNomeSubCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a SELECT nomeOperadora FROM CadOperadora WHERE operadoraID= @Codoperadora.
         /// </summary>
         internal static string RecuperaOperadoraCartao {

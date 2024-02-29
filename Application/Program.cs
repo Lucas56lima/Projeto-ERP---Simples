@@ -1,4 +1,3 @@
-using Application;
 using Domain.Interface;
 using Infrastructure.Queries;
 using Infrastructure.Repository;

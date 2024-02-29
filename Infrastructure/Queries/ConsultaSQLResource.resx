@@ -202,6 +202,22 @@ INNER JOIN Estoque ON CadastroProduto.codigoProduto = Estoque.produto WHERE Cada
     <value>SELECT * FROM CadMarca</value>
     <comment>Recupera marcas disponíveis.</comment>
   </data>
+  <data name="RecuperaNomeCategoria" xml:space="preserve">
+    <value>SELECT * FROM CadCategoria WHERE categoriaID = @categoria</value>
+    <comment>Recupera nome da categoria.</comment>
+  </data>
+  <data name="RecuperaNomeCor" xml:space="preserve">
+    <value>SELECT * FROM CadCor WHERE corID = @cor</value>
+    <comment>Recupera nome da cor.</comment>
+  </data>
+  <data name="RecuperaNomeMarca" xml:space="preserve">
+    <value>SELECT * FROM CadMarca WHERE marcaID = @marca</value>
+    <comment>Recupera nome da marca.</comment>
+  </data>
+  <data name="RecuperaNomeSubCategoria" xml:space="preserve">
+    <value>SELECT * FROM CadSubCategoria WHERE subCategoriaID = @subCategoria</value>
+    <comment>Recupera nome da sub categoria.</comment>
+  </data>
   <data name="RecuperaOperadoraCartao" xml:space="preserve">
     <value>SELECT nomeOperadora FROM CadOperadora WHERE operadoraID= @Codoperadora</value>
     <comment>Recupera operadora de cartão disponível.</comment>

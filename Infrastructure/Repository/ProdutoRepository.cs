@@ -1,7 +1,9 @@
 ﻿using System.Data.SqlClient;
 using Dapper;
 using Domain.Commands;
+using Domain.Entidades;
 using Domain.Interface;
+using Domain.ViewModel;
 
 namespace Infrastructure.Repository
 {
@@ -42,6 +44,10 @@ namespace Infrastructure.Repository
                 string postEstoque = _consultaSQL.ObterConsulta("InserirEstoqueProduto");                
                 string updateCategoria = _consultaSQL.ObterConsulta("AtualizaCategoria");
                 string getNumCategoria = _consultaSQL.ObterConsulta("RecuperaCategoria");
+                string getNomeCategoria = _consultaSQL.ObterConsulta("RecuperaNomeCategoria");
+                string getNomeSubCategoria = _consultaSQL.ObterConsulta("RecuperaNomeSubCategoria");
+                string getNomeMarca = _consultaSQL.ObterConsulta("RecuperaNomeMarca");
+                string getNomeCor = _consultaSQL.ObterConsulta("RecuperaNomeCor");
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {                    
@@ -54,18 +60,21 @@ namespace Infrastructure.Repository
                            
                         // Crie o código do produto usando o número da categoria, marca e cor
                             var codigoProduto = await GeraCodigoProdutoAutomatico(command.marca,command.cor,command.categoria );
-                        var numCategoria = conn.Query<int>(getNumCategoria, new { nomeCategoria = command.categoria }).FirstOrDefault();
-                            // Execute a inserção na tabela
-                            await conn.ExecuteAsync(queryInserir, new
+                            var numCategoria = conn.Query<int>(getNumCategoria, new { categoriaID = command.categoria }).FirstOrDefault();
+                            var nomeCategoria = conn.Query<CategoriaCommand>(getNomeCategoria, new {categoria = command.categoria}).FirstOrDefault();
+                            var nomeSubCategoria = conn.Query<SubCategoriaCommand>(getNomeSubCategoria, new { subCategoria = command.subCategoria }).FirstOrDefault();
+                            var nomeMarca = conn.Query<MarcaCommand>(getNomeMarca, new { marca = command.marca }).FirstOrDefault();
+                            var nomeCor = conn.Query<CorCommand>(getNomeCor, new { cor = command.cor }).FirstOrDefault();
+                        // Execute a inserção na tabela
+                        await conn.ExecuteAsync(queryInserir, new
                             {
                                 descricao = string.IsNullOrWhiteSpace(command.descricao) ? string.Empty : command.descricao,
                                 precoProduto = command.precoProduto,
-                                categoria = command.categoria,
-                                subCategoria = command.subCategoria,
-                                marca = command.marca,
-                                cor = command.cor,
+                                categoria = nomeCategoria.nomeCategoria,
+                                subCategoria = nomeSubCategoria.nomeSubCategoria,
+                                marca = nomeMarca.nomeMarca,
+                                cor = nomeCor.nomeCor,
                                 codigoProduto = codigoProduto
-
                             });
 
                             await conn.ExecuteAsync(updateCategoria, new { numCategoria = numCategoria, categoria = command.categoria });
@@ -78,7 +87,7 @@ namespace Infrastructure.Repository
                                     
                             throw new Exception("Erro ao cadastrar produto", ex);
                         }
-                    }
+                }
                 
             }
             catch (SqlException ex) when (ex.Number == 2627)
@@ -124,13 +133,13 @@ namespace Infrastructure.Repository
         /// Retorna uma lista de todos os produtos cadastrados no banco de dados.
         /// </summary>
         /// <returns>Uma lista de produtos.</returns>
-        public async Task<IEnumerable<ProdutoCommand>> GetAsyncList()
+        public async Task<IEnumerable<ProdutoViewModel>> GetAsyncList()
         {
             string queryLista = _consultaSQL.ObterConsulta("ConsultaProdutoEstoque");
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                return await conn.QueryAsync<ProdutoCommand>(queryLista);
+                return await conn.QueryAsync<ProdutoViewModel>(queryLista);
             }
         }
 
@@ -140,7 +149,7 @@ namespace Infrastructure.Repository
         /// <param name="codigoProduto">O código do produto a ser pesquisado.</param>
         /// <param name="descricao">A descrição do produto a ser pesquisado.</param>
         /// <returns>Uma lista de produtos que correspondem aos critérios de pesquisa.</returns>
-        public async Task<IEnumerable<ProdutoCommand>> GetAsyncProduto(int codigoProduto, string? descricao)
+        public async Task<IEnumerable<ProdutoViewModel>> GetAsyncProduto(int codigoProduto, string? descricao)
         {
             string queryProduto = "";
             var parameters = new DynamicParameters();
@@ -157,7 +166,7 @@ namespace Infrastructure.Repository
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {                
-                return await conn.QueryAsync<ProdutoCommand>(queryProduto, parameters) ;
+                return await conn.QueryAsync<ProdutoViewModel>(queryProduto, parameters) ;
             }
         }
 
@@ -168,7 +177,7 @@ namespace Infrastructure.Repository
         /// <param name="cor">O ID da cor do produto.</param>
         /// <param name="categoria">O ID da categoria do produto.</param>
         /// <returns>O código de produto gerado.</returns>
-        public async Task<int> GeraCodigoProdutoAutomatico(string marca, string cor, string categoria)
+        public async Task<int> GeraCodigoProdutoAutomatico(int marca, int cor, int categoria)
         {
             string getNumCategoria = _consultaSQL.ObterConsulta("RecuperaCategoria");
             string getCategoriaID = _consultaSQL.ObterConsulta("RecuperaIDCategoria");
@@ -177,16 +186,12 @@ namespace Infrastructure.Repository
             await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 int numCategoria;
-                int categoriaID;
-                int marcaID;
-                int corID;
+                
                 try 
                 {
                     // Obtenha o número da categoria
-                   categoriaID = conn.Query<int>(getCategoriaID, new { nomeCategoria = categoria }).FirstOrDefault();
-                   numCategoria = conn.Query<int>(getNumCategoria, new { categoriaID = categoriaID }).FirstOrDefault();
-                   marcaID = conn.Query<int>(getMarcaID, new {nomeMarca = marca}).FirstOrDefault();
-                   corID = conn.Query<int>(getCorID, new { nomeCor = cor }).FirstOrDefault();
+                   numCategoria = conn.Query<int>(getNumCategoria, new { categoriaID = categoria }).FirstOrDefault();
+                   
                 }
                 catch(Exception ex) 
                 {
@@ -194,7 +199,7 @@ namespace Infrastructure.Repository
                 };
 
                 // Crie o código do produto usando o número da categoria, marca e cor
-                var codigoProduto = $"{numCategoria}{marcaID}{corID}";
+                var codigoProduto = $"{numCategoria}{marca}{cor}";
 
                 return Convert.ToInt32(codigoProduto);
             }

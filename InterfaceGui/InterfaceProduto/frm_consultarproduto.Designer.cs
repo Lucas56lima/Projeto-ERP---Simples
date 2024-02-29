@@ -31,14 +31,7 @@
 
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            Column_produto = new DataGridViewTextBoxColumn();
-            Column_descricao = new DataGridViewTextBoxColumn();
-            Column_preco = new DataGridViewTextBoxColumn();
-            Column_categoria = new DataGridViewTextBoxColumn();
-            Column_marca = new DataGridViewTextBoxColumn();
-            Column_Cor = new DataGridViewTextBoxColumn();
-            Column_estoque = new DataGridViewTextBoxColumn();
+            dataGridView1 = new DataGridView();            
             panel1 = new Panel();
             btnPesquisar = new Button();
             label_produto = new Label();
@@ -59,35 +52,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(743, 232);
-            dataGridView1.TabIndex = 0;
-            // 
-            // Column_produto
-            // 
-            Column_produto.Name = "Column_produto";
-            // 
-            // Column_descricao
-            // 
-            Column_descricao.Name = "Column_descricao";
-            // 
-            // Column_preco
-            // 
-            Column_preco.Name = "Column_preco";
-            // 
-            // Column_categoria
-            // 
-            Column_categoria.Name = "Column_categoria";
-            // 
-            // Column_marca
-            // 
-            Column_marca.Name = "Column_marca";
-            // 
-            // Column_Cor
-            // 
-            Column_Cor.Name = "Column_Cor";
-            // 
-            // Column_estoque
-            // 
-            Column_estoque.Name = "Column_estoque";
+            dataGridView1.TabIndex = 0;   
             // 
             // panel1
             // 
@@ -199,14 +164,7 @@
             var filtro = await _produtoService.GetAsyncProduto(codigoProduto, descricao);
 
             dataGridView1.DataSource = filtro;
-        }
-        private DataGridViewTextBoxColumn Column_produto;
-        private DataGridViewTextBoxColumn Column_descricao;
-        private DataGridViewTextBoxColumn Column_preco;
-        private DataGridViewTextBoxColumn Column_categoria;
-        private DataGridViewTextBoxColumn Column_marca;
-        private DataGridViewTextBoxColumn Column_Cor;
-        private DataGridViewTextBoxColumn Column_estoque;
+        }        
         private Panel panel1;
         private Label label_produto;
         private Label label_descricao;
